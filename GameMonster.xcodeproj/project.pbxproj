@@ -7,12 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A62678DF4C001D2168 /* ProfileView.swift */; };
+		F74334A92678E08D001D2168 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A82678E08D001D2168 /* Profile.swift */; };
+		F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AA2678F1CD001D2168 /* HomeView.swift */; };
+		F74334AD2678F99C001D2168 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AC2678F99C001D2168 /* Game.swift */; };
+		F74334AF2678FA7E001D2168 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AE2678FA7E001D2168 /* Home.swift */; };
 		F7EDD63026779A8900CC29E6 /* GameMonsterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */; };
 		F7EDD63226779A8900CC29E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD63126779A8900CC29E6 /* ContentView.swift */; };
 		F7EDD63426779A8B00CC29E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7EDD63326779A8B00CC29E6 /* Assets.xcassets */; };
 		F7EDD63726779A8B00CC29E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7EDD63626779A8B00CC29E6 /* Preview Assets.xcassets */; };
 		F7EDD64126779A8B00CC29E6 /* GameMonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD64026779A8B00CC29E6 /* GameMonsterTests.swift */; };
 		F7EDD64B26779A8B00CC29E6 /* GameMonsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD64A26779A8B00CC29E6 /* GameMonsterUITests.swift */; };
+		F7EDD65B26779B0C00CC29E6 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD65A26779B0C00CC29E6 /* GameBoard.swift */; };
+		F7EDD65D26779B6800CC29E6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD65C26779B6800CC29E6 /* Player.swift */; };
+		F7EDD65F26779E0E00CC29E6 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD65E26779E0E00CC29E6 /* Move.swift */; };
+		F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD66026779EF100CC29E6 /* TicTacToe.swift */; };
+		F7EDD66B2677B5D700CC29E6 /* TTTBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */; };
+		F7EDD66D2677B62700CC29E6 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD66C2677B62700CC29E6 /* SquareView.swift */; };
+		F7EDD6712677C4D800CC29E6 /* TTTGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6702677C4D800CC29E6 /* TTTGame.swift */; };
+		F7EDD6732677C5E400CC29E6 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6722677C5E400CC29E6 /* Header.swift */; };
+		F7EDD6752677C60700CC29E6 /* PlayerTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6742677C60700CC29E6 /* PlayerTag.swift */; };
+		F7EDD6772677C88C00CC29E6 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6762677C88C00CC29E6 /* Audience.swift */; };
+		F7EDD6792677D4F800CC29E6 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6782677D4F800CC29E6 /* BottomBar.swift */; };
+		F7EDD68226781E3400CC29E6 /* ConfettiSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68126781E1400CC29E6 /* ConfettiSwiftUI.swift */; };
+		F7EDD68326781E4300CC29E6 /* RoundedCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD67E26781E1400CC29E6 /* RoundedCross.swift */; };
+		F7EDD68426781E4300CC29E6 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD67F26781E1400CC29E6 /* Triangle.swift */; };
+		F7EDD68526781E4300CC29E6 /* SlimRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68026781E1400CC29E6 /* SlimRectangle.swift */; };
+		F7EDD68B2678556500CC29E6 /* GroupSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */; };
+		F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */; };
+		F7EDD6902678618C00CC29E6 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68F2678618C00CC29E6 /* Messages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F74334A62678DF4C001D2168 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F74334A82678E08D001D2168 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F74334AA2678F1CD001D2168 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F74334AC2678F99C001D2168 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F74334AE2678FA7E001D2168 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F7EDD62C26779A8900CC29E6 /* GameMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMonsterApp.swift; sourceTree = "<group>"; };
 		F7EDD63126779A8900CC29E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +70,25 @@
 		F7EDD64026779A8B00CC29E6 /* GameMonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMonsterTests.swift; sourceTree = "<group>"; };
 		F7EDD64626779A8B00CC29E6 /* GameMonsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameMonsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EDD64A26779A8B00CC29E6 /* GameMonsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMonsterUITests.swift; sourceTree = "<group>"; };
+		F7EDD65A26779B0C00CC29E6 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		F7EDD65C26779B6800CC29E6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F7EDD65E26779E0E00CC29E6 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		F7EDD66026779EF100CC29E6 /* TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe.swift; sourceTree = "<group>"; };
+		F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTBoardView.swift; sourceTree = "<group>"; };
+		F7EDD66C2677B62700CC29E6 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		F7EDD6702677C4D800CC29E6 /* TTTGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTGame.swift; sourceTree = "<group>"; };
+		F7EDD6722677C5E400CC29E6 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		F7EDD6742677C60700CC29E6 /* PlayerTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTag.swift; sourceTree = "<group>"; };
+		F7EDD6762677C88C00CC29E6 /* Audience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audience.swift; sourceTree = "<group>"; };
+		F7EDD6782677D4F800CC29E6 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		F7EDD67E26781E1400CC29E6 /* RoundedCross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCross.swift; sourceTree = "<group>"; };
+		F7EDD67F26781E1400CC29E6 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		F7EDD68026781E1400CC29E6 /* SlimRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlimRectangle.swift; sourceTree = "<group>"; };
+		F7EDD68126781E1400CC29E6 /* ConfettiSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiSwiftUI.swift; sourceTree = "<group>"; };
+		F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSessionManager.swift; sourceTree = "<group>"; };
+		F7EDD68C267855D700CC29E6 /* GameMonster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameMonster.entitlements; sourceTree = "<group>"; };
+		F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTogether.swift; sourceTree = "<group>"; };
+		F7EDD68F2678618C00CC29E6 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +139,13 @@
 		F7EDD62E26779A8900CC29E6 /* GameMonster */ = {
 			isa = PBXGroup;
 			children = (
+				F7EDD68C267855D700CC29E6 /* GameMonster.entitlements */,
 				F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */,
 				F7EDD63126779A8900CC29E6 /* ContentView.swift */,
+				F7EDD65726779A9F00CC29E6 /* Model */,
+				F7EDD65826779AAD00CC29E6 /* View */,
+				F7EDD65926779ABC00CC29E6 /* ViewModel */,
+				F7EDD67C26781E1400CC29E6 /* ConfettiSwiftUI */,
 				F7EDD63326779A8B00CC29E6 /* Assets.xcassets */,
 				F7EDD63526779A8B00CC29E6 /* Preview Content */,
 			);
@@ -122,6 +174,97 @@
 				F7EDD64A26779A8B00CC29E6 /* GameMonsterUITests.swift */,
 			);
 			path = GameMonsterUITests;
+			sourceTree = "<group>";
+		};
+		F7EDD65726779A9F00CC29E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD65C26779B6800CC29E6 /* Player.swift */,
+				F7EDD65E26779E0E00CC29E6 /* Move.swift */,
+				F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */,
+				F7EDD68F2678618C00CC29E6 /* Messages.swift */,
+				F74334AC2678F99C001D2168 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7EDD65826779AAD00CC29E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD6702677C4D800CC29E6 /* TTTGame.swift */,
+				F74334AA2678F1CD001D2168 /* HomeView.swift */,
+				F74334A62678DF4C001D2168 /* ProfileView.swift */,
+				F7EDD6862678532C00CC29E6 /* ComponentViews */,
+				F7EDD6872678534A00CC29E6 /* Confetti */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7EDD65926779ABC00CC29E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD65A26779B0C00CC29E6 /* GameBoard.swift */,
+				F7EDD66026779EF100CC29E6 /* TicTacToe.swift */,
+				F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */,
+				F74334A82678E08D001D2168 /* Profile.swift */,
+				F74334AE2678FA7E001D2168 /* Home.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7EDD67C26781E1400CC29E6 /* ConfettiSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD67D26781E1400CC29E6 /* Shapes */,
+			);
+			path = ConfettiSwiftUI;
+			sourceTree = "<group>";
+		};
+		F7EDD67D26781E1400CC29E6 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		F7EDD6862678532C00CC29E6 /* ComponentViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD6892678539F00CC29E6 /* Game */,
+				F7EDD6882678537D00CC29E6 /* Page */,
+			);
+			path = ComponentViews;
+			sourceTree = "<group>";
+		};
+		F7EDD6872678534A00CC29E6 /* Confetti */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD68126781E1400CC29E6 /* ConfettiSwiftUI.swift */,
+				F7EDD67E26781E1400CC29E6 /* RoundedCross.swift */,
+				F7EDD67F26781E1400CC29E6 /* Triangle.swift */,
+				F7EDD68026781E1400CC29E6 /* SlimRectangle.swift */,
+			);
+			path = Confetti;
+			sourceTree = "<group>";
+		};
+		F7EDD6882678537D00CC29E6 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD6762677C88C00CC29E6 /* Audience.swift */,
+				F7EDD6722677C5E400CC29E6 /* Header.swift */,
+				F7EDD6742677C60700CC29E6 /* PlayerTag.swift */,
+				F7EDD6782677D4F800CC29E6 /* BottomBar.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		F7EDD6892678539F00CC29E6 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */,
+				F7EDD66C2677B62700CC29E6 /* SquareView.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +397,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7EDD6732677C5E400CC29E6 /* Header.swift in Sources */,
+				F7EDD66B2677B5D700CC29E6 /* TTTBoardView.swift in Sources */,
+				F7EDD6752677C60700CC29E6 /* PlayerTag.swift in Sources */,
+				F74334A92678E08D001D2168 /* Profile.swift in Sources */,
+				F7EDD68526781E4300CC29E6 /* SlimRectangle.swift in Sources */,
+				F7EDD65F26779E0E00CC29E6 /* Move.swift in Sources */,
+				F7EDD65D26779B6800CC29E6 /* Player.swift in Sources */,
+				F74334AD2678F99C001D2168 /* Game.swift in Sources */,
+				F7EDD68226781E3400CC29E6 /* ConfettiSwiftUI.swift in Sources */,
 				F7EDD63226779A8900CC29E6 /* ContentView.swift in Sources */,
+				F7EDD65B26779B0C00CC29E6 /* GameBoard.swift in Sources */,
+				F7EDD6772677C88C00CC29E6 /* Audience.swift in Sources */,
+				F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */,
+				F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */,
+				F7EDD6712677C4D800CC29E6 /* TTTGame.swift in Sources */,
+				F7EDD6792677D4F800CC29E6 /* BottomBar.swift in Sources */,
 				F7EDD63026779A8900CC29E6 /* GameMonsterApp.swift in Sources */,
+				F7EDD68326781E4300CC29E6 /* RoundedCross.swift in Sources */,
+				F7EDD66D2677B62700CC29E6 /* SquareView.swift in Sources */,
+				F7EDD6902678618C00CC29E6 /* Messages.swift in Sources */,
+				F7EDD68B2678556500CC29E6 /* GroupSessionManager.swift in Sources */,
+				F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */,
+				F74334AF2678FA7E001D2168 /* Home.swift in Sources */,
+				F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */,
+				F7EDD68426781E4300CC29E6 /* Triangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GameMonster/GameMonster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameMonster/Preview Content\"";
@@ -423,7 +590,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GameMonster/GameMonster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameMonster/Preview Content\"";
@@ -453,7 +621,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
