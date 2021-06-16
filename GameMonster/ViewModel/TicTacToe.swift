@@ -10,28 +10,19 @@ import SwiftUI
 import Combine
 import GroupActivities
 
-public class TicTacToe: ObservableObject, GameBoard {
+public class TicTacToe: GameBoardRequestType {
     
     
-    public let name = "Tic Tac Toe"
     public let columns = [GridItem(.flexible()),
                           GridItem(.flexible()),
                           GridItem(.flexible())]
-    // Game modifiers
-    @Published public var isDisabled = false
-    @Published public var moves: [Move?] = Array(repeating: nil, count: 9)
-    
-    // TODO: Update with group session
-    @Published public var audience = [Player]()
-    @Published public var opponent = Player(id: UUID(), name: "Mason")
-    @Published public var wins = 0
 
     private let generator = UINotificationFeedbackGenerator()
     private let profile = Profile()
     
     
     // Resets GameBoard back to initial state
-    public func reset() {
+    public override func reset() {
         moves = Array(repeating: nil, count: 9)
         audience = [Player]()
 
@@ -40,12 +31,12 @@ public class TicTacToe: ObservableObject, GameBoard {
         sendMessage(moves: moves, audience: audience)
     }
     
-    public func update(for move: Move) {
+    public override func update(for move: Move) {
         validateMove(for: move)
     }
     
     // Clears everything from memory, for switching to another game
-    public func removeGame() {
+    public override func removeGame() {
         
     }
     
@@ -53,10 +44,11 @@ public class TicTacToe: ObservableObject, GameBoard {
         profile.saveName(name)
     }
     
-    @Published public var player: Player
+    @Published public var player = Player(id: UUID(), name: "Crazy Joe")
     
     init(){
         self.player = profile.getDefault(for: UUID())
+        super.init(type: .TicTacToe)
     }
     
     
@@ -96,7 +88,7 @@ public class TicTacToe: ObservableObject, GameBoard {
     }
     
     
-    private func flippedMoves() -> [Move?] {
+    public override func flippedMoves() -> [Move?] {
         
         var newMoves: [Move?] = Array(repeating: nil, count: 9)
         for move in moves {
@@ -196,100 +188,5 @@ public class TicTacToe: ObservableObject, GameBoard {
        
         return movePosition
     }
-    
-    
-    
-    
-    
-    
-
-    
-    // MARK: Group Session Manager
-    
-    private var tasks = Set<Task.Handle<Void, Never>>()
-    private var subscriptions = Set<AnyCancellable>()
-    
-    @Published var groupSession: GroupSession<PlayTogether>?
-    private var messenger: GroupSessionMessenger?
-   
-
-    
-    // Send messages
-    private func sendMessage(as move: Move){
-        if let messenger = messenger {
-            async {
-                do {
-                    try await messenger.send(MoveMessage(move: move))
-                } catch {
-                print("Unable to process request")
-                }
-            }
-        }
-    }
-    
-    private func sendMessage(moves: [Move?], audience: [Player]){
-        if let messenger = messenger {
-            async {
-                do {
-                    try await messenger.send(BoardMessage(moves: moves, audience: audience))
-                } catch {
-                print("Unable to send board message")
-                }
-            }
-        }
-    }
-    
-    func configureGroupSession(_ groupSession: GroupSession<PlayTogether>){
-        print("Group Session Configured")
-        reset()
-        
-        let messenger = GroupSessionMessenger(session: groupSession)
-        self.messenger = messenger
-        self.groupSession = groupSession
-        
-        // Update late joiners
-        groupSession.$activeParticipants
-            .sink{ [self] activeParticipants in
-                sendMessage(moves: flippedMoves(), audience: audience)
-            }
-            .store(in: &subscriptions)
-        
-        // Await to receive Messages
-        let moveTask = detach { [weak self] in
-            for await (message, _) in messenger.messages(of:
-                MoveMessage.self) {
-                self?.handle(message)
-            }
-        }
-        tasks.insert(moveTask)
-        
-        let boardTask = detach { [weak self] in
-            for await (message, _) in messenger.messages(of:
-                BoardMessage.self) {
-                self?.handle(message)
-            }
-        }
-        tasks.insert(boardTask)
-        
-        groupSession.join()
-    }
-    
-    // Process the input messages and handle accordingly
-    private func handle(_ message: MoveMessage){
-        DispatchQueue.main.async { [self] in
-            update(for: message.move)
-            isDisabled = false
-        }
-    }
-    
-    private func handle(_ message: BoardMessage){
-        DispatchQueue.main.async { [self] in
-            moves = message.moves
-            audience = message.audience
-        }
-    }
-    
-    
-    
     
 }

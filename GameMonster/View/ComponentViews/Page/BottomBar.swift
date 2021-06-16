@@ -25,7 +25,7 @@ struct BottomBar: View {
                 }
             }
             Spacer()
-            if game.groupSession == nil && groupStateObserver.isEligibleForGroupSession {
+            if game.session == nil && groupStateObserver.isEligibleForGroupSession {
                 Button(action: {PlayTogether().activate()
                     print("Sending Activation Request")}) {
                     Text("Group Activity")

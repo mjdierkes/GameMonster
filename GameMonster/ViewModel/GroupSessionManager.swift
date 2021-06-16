@@ -10,17 +10,10 @@ import GroupActivities
 import Combine
 import SwiftUI
 
-class GroupSessionManager {
-    
-    private var tasks = Set<Task.Handle<Void, Never>>()
-    private var subscriptions = Set<AnyCancellable>()
-    
-    private var groupSession: GroupSession<PlayTogether>?
-    private var messenger: GroupSessionMessenger?
-   
+public extension GameBoardRequestType {
     
     // Send messages
-    public func sendMessage(as move: Move){
+    func sendMessage(as move: Move){
         if let messenger = messenger {
             async {
                 do {
@@ -32,19 +25,30 @@ class GroupSessionManager {
         }
     }
     
-    private func configureGroupSession(_ groupSession: GroupSession<PlayTogether>){
-//        game.reset()
+    func sendMessage(moves: [Move?], audience: [Player]){
+        if let messenger = messenger {
+            async {
+                do {
+                    try await messenger.send(BoardMessage(moves: moves, audience: audience))
+                } catch {
+                print("Unable to send board message")
+                }
+            }
+        }
+    }
+    
+    func configureGroupSession(_ groupSession: GroupSession<PlayTogether>){
+        print("Group Session Configured")
+        reset()
         
         let messenger = GroupSessionMessenger(session: groupSession)
         self.messenger = messenger
-        self.groupSession = groupSession
+        self.session = groupSession
         
         // Update late joiners
         groupSession.$activeParticipants
-            .sink{ activeParticipants in
-                
-               
-                
+            .sink{ [self] activeParticipants in
+                sendMessage(moves: flippedMoves(), audience: audience)
             }
             .store(in: &subscriptions)
         
@@ -57,13 +61,29 @@ class GroupSessionManager {
         }
         tasks.insert(moveTask)
         
+        let boardTask = detach { [weak self] in
+            for await (message, _) in messenger.messages(of:
+                BoardMessage.self) {
+                self?.handle(message)
+            }
+        }
+        tasks.insert(boardTask)
+        
         groupSession.join()
     }
     
     // Process the input messages and handle accordingly
     private func handle(_ message: MoveMessage){
-        DispatchQueue.main.async {
-//            game.update(for: message.move)
+        DispatchQueue.main.async { [self] in
+            update(for: message.move)
+            isDisabled = false
+        }
+    }
+    
+    private func handle(_ message: BoardMessage){
+        DispatchQueue.main.async { [self] in
+            moves = message.moves
+            audience = message.audience
         }
     }
     

@@ -7,9 +7,10 @@
 
 import Foundation
 import GroupActivities
-struct PlayTogether: GroupActivity {
+
+public struct PlayTogether: GroupActivity {
     
-    var metadata: GroupActivityMetadata {
+    public var metadata: GroupActivityMetadata {
         var metadata = GroupActivityMetadata()
         metadata.title = NSLocalizedString("GameMonster", comment: "TicTacToe")
         

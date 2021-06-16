@@ -10,7 +10,7 @@ import SwiftUI
 struct TTTBoardView: View {
     
     @EnvironmentObject var viewModel: TicTacToe
-
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack{

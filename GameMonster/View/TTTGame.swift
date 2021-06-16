@@ -10,7 +10,7 @@ import SwiftUI
 struct TTTGame: View {
     
     @StateObject private var game = TicTacToe()
-
+    
     var body: some View {
         VStack{
             Header()
