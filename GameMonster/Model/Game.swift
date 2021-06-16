@@ -13,7 +13,7 @@ public struct Game: Identifiable{
     
     let name: String
     let coverImage: Image?
-
+    
     
     let defaults = UserDefaults.standard
 

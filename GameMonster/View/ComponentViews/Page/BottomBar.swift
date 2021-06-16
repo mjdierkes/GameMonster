@@ -12,10 +12,11 @@ struct BottomBar: View {
     
     @EnvironmentObject var game: TicTacToe
     @StateObject var groupStateObserver = GroupStateObserver()
-    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
         HStack{
-            Button(action: {}) {
+            Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
                 ZStack{
                     Circle()
                         .foregroundColor(Color("Offwhite"))

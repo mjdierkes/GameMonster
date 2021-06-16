@@ -27,6 +27,10 @@ public protocol GameBoard: ObservableObject {
     
 }
 
+//public class GameBoardRequestType: GameBoard {
+//    
+//}
+
 public enum GameStatus {
     case local, opponent, draw, undetermined
 }

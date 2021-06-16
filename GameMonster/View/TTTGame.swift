@@ -18,6 +18,8 @@ struct TTTGame: View {
             Audience()
             BottomBar()
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         .padding()
         .environmentObject(game)
         .task {

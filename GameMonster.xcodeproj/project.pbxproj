@@ -61,6 +61,7 @@
 		F74334AA2678F1CD001D2168 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F74334AC2678F99C001D2168 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F74334AE2678FA7E001D2168 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F74334B026796952001D2168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F7EDD62C26779A8900CC29E6 /* GameMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMonsterApp.swift; sourceTree = "<group>"; };
 		F7EDD63126779A8900CC29E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		F7EDD62E26779A8900CC29E6 /* GameMonster */ = {
 			isa = PBXGroup;
 			children = (
+				F74334B026796952001D2168 /* Info.plist */,
 				F7EDD68C267855D700CC29E6 /* GameMonster.entitlements */,
 				F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */,
 				F7EDD63126779A8900CC29E6 /* ContentView.swift */,
@@ -585,9 +587,14 @@
 				DEVELOPMENT_TEAM = 92Z6CXGJ35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameMonster/Info.plist;
+				INFOPLIST_KEY_CFBundleExecutable = GameMonster;
+				INFOPLIST_KEY_CFBundleName = GameMonster;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -616,9 +623,14 @@
 				DEVELOPMENT_TEAM = 92Z6CXGJ35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameMonster/Info.plist;
+				INFOPLIST_KEY_CFBundleExecutable = GameMonster;
+				INFOPLIST_KEY_CFBundleName = GameMonster;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

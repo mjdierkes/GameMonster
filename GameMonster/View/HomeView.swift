@@ -18,47 +18,55 @@ struct HomeView: View {
 
     var body: some View {
       
-        
-        VStack{
-            Text("Games")
-                .fontWeight(.heavy).font(.title)
-            LazyVGrid(columns: columns, spacing: 35) {
-                ForEach(home.games) { game in
-                    VStack{
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 19)
-                                .foregroundColor(Color("Offwhite"))
-                                .frame(width: 100, height: 100)
-                            
-                            if game.wins > 0 {
-                                HStack{
-                                    Text("\(game.wins)")
-                                        .bold()
-                                        .font(.system(size: 12))
-                                        .offset(x: 5)
-                                    Image(systemName: "crown.fill")
-                                        .resizable()
-                                        .foregroundColor(Color.yellow)
-                                        .frame(width: 15, height: 12)
-                                }
-                                .offset(x: 22, y: -32)
-                            }
-                            
-                        }
-                       
-                        Text(game.name)
-                            .font(.subheadline)
-                            .bold()
-                    }
-                    .onTapGesture {
-                        isPresented = true
+        NavigationView {
+            VStack{
+                Text("Games")
+                    .fontWeight(.heavy).font(.title)
+                LazyVGrid(columns: columns, spacing: 35) {
+                    ForEach(home.games) { game in
                         
-                    }.fullScreenCover(isPresented: $isPresented) { TTTGame() }
-                }
-               
-            }.padding()
-            Spacer()
+                        NavigationLink(destination: TTTGame()){
+                            VStack{
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 19)
+                                        .foregroundColor(Color("Offwhite"))
+                                        .frame(width: 100, height: 100)
+                                    
+                                    if game.wins > 0 {
+                                        HStack{
+                                            Text("\(game.wins)")
+                                                .bold()
+                                                .font(.system(size: 12))
+                                                .offset(x: 5)
+                                            Image(systemName: "crown.fill")
+                                                .resizable()
+                                                .foregroundColor(Color.yellow)
+                                                .frame(width: 15, height: 12)
+                                        }
+                                        .offset(x: 22, y: -32)
+                                    }
+                                    
+                                }
+                               
+                                Text(game.name)
+                                    .font(.subheadline)
+                                    .bold()
+                            }
+                            .accentColor(Color.black)
+
+                          
+                        }
+                        
+                    }
+                   
+                }.padding()
+                Spacer()
+            }
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
+        
+        
         
         
     }
