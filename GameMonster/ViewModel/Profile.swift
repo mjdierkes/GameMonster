@@ -14,21 +14,16 @@ public struct Profile {
 
     
     public func getDefault(for identifier: UUID) -> Player {
-//        
-//        if let name = defaults.string(forKey: "name"){
-//            print(name)
-//            return Player(id: identifier, name: name)
-//        }
-//        else {
-//            let name = randomName()
-//            saveName(name)
-//            print(name)
-//            return Player(id: identifier, name: name)
-//        }
         
-        print("Crazy Joe Dude")
-        return Player(id: UUID(), name: "Crazy Joe")
-        
+        if let name = defaults.string(forKey: "name"){
+            return Player(id: identifier, name: name)
+        }
+        else {
+            let name = randomName()
+            saveName(name)
+            return Player(id: identifier, name: name)
+        }
+                
     }
     
     public func saveName(_ name: String){

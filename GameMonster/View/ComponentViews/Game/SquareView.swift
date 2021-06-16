@@ -11,12 +11,14 @@ struct SquareView: View {
     
     var proxy: GeometryProxy
     var systemImageName: String?
+    var isWinning: Bool
     
     var body: some View {
         ZStack{
             Rectangle()
                 .cornerRadius(9)
-                .foregroundColor(.gray).opacity(0.5)
+                .foregroundColor(isWinning ? .orange : .gray).opacity(0.5)
+
                 .frame(width: proxy.size.width/3 - 15, height: proxy.size.width/3 - 15)
             
             if let symbol = systemImageName {

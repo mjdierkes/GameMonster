@@ -19,7 +19,7 @@ struct TTTBoardView: View {
                         ForEach(0..<9) { i in
                             ZStack {
                                 SquareView(proxy: geometry, systemImageName:
-                                            viewModel.moves[i]?.indicator ?? nil)
+                                            viewModel.moves[i]?.indicator ?? nil, isWinning: viewModel.moves[i]?.isWinning ?? false)
                             }
                             .onTapGesture {
                                 viewModel.update(for: Move(mover: .local, boardIndex: i))

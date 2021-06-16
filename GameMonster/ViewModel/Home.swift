@@ -19,11 +19,5 @@ public class Home: ObservableObject{
             Game(name: "Chess", coverImage: nil)
         
         ]
-        
-    
-    
-    
-    
-
     
 }

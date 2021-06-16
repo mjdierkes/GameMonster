@@ -55,7 +55,6 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
     
     
     public init(type: GameType){
-        print("Super init")
         self.type = type
     }
     

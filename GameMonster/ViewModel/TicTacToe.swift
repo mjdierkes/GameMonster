@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 import GroupActivities
+import AVKit
 
 public class TicTacToe: GameBoardRequestType {
     
@@ -18,6 +19,10 @@ public class TicTacToe: GameBoardRequestType {
                           GridItem(.flexible())]
 
     private let generator = UINotificationFeedbackGenerator()
+    private let impactGenerator = UIImpactFeedbackGenerator(style: .light)
+    
+    private var audioPlayer: AVAudioPlayer?
+
     private let profile = Profile()
     
     
@@ -73,14 +78,21 @@ public class TicTacToe: GameBoardRequestType {
         let position = move.boardIndex
         if move.mover == .local { isDisabled = true }
         
-        if updateGameStatus() != .undetermined{
+        if updateGameStatus() != .undetermined {
             gameOver()
         }
+        
         else if !isSquareOccupied(forIndex: position){
             moves[position] = Move(mover: move.mover, boardIndex: position)
+            impactGenerator.impactOccurred()
+            playSound(name: "SquareSoundEffect", type: "wav")
+            
             if move.mover == .local {
                 //Update opponent on local move
                 sendMessage(as: Move(mover: .opponent, boardIndex: position))
+                if updateGameStatus() == .local {
+                    gameOver()
+                }
             }
         }
 
@@ -90,18 +102,18 @@ public class TicTacToe: GameBoardRequestType {
     
     public override func flippedMoves() -> [Move?] {
         
-        var newMoves: [Move?] = Array(repeating: nil, count: 9)
-        for move in moves {
-            if let move = move {
+        var newMoves: [Move?] = moves
+        for i in 0..<moves.count {
+            if let move = moves[i] {
                 if move.mover == .local {
-                    newMoves.append(Move(mover: .opponent, boardIndex: move.boardIndex))
+                    newMoves[i] = Move(mover: .opponent, boardIndex: move.boardIndex, isWinning: move.isWinning)
                 }
                 else {
-                    newMoves.append(Move(mover: .local, boardIndex: move.boardIndex))
+                    newMoves[i] = Move(mover: .local, boardIndex: move.boardIndex, isWinning: move.isWinning)
                 }
             }
         }
-        
+
         return newMoves
     }
     
@@ -118,6 +130,7 @@ public class TicTacToe: GameBoardRequestType {
     private func updateGameStatus() -> GameStatus{
         
         if checkWinCondition(for: .local){
+            print("\(player.name) Wins!")
             return .local
         }
         
@@ -138,12 +151,21 @@ public class TicTacToe: GameBoardRequestType {
     private func gameOver() {
         isDisabled = true
         if updateGameStatus() == .local {
+            
             generator.notificationOccurred(.success)
             wins += 1
+            
+            playSound(name: "winSoundEffect", type: "wav")
         }
         print("Game Over")
     }
     
+    private func updateWinningMoves(with pattern: Set<Int>) {
+        for i in pattern {
+            moves[i]?.isWinning = true
+        }
+        sendMessage(moves: flippedMoves(), audience: audience)
+    }
     
     
     private func checkWinCondition(for mover: Mover) -> Bool {
@@ -154,7 +176,10 @@ public class TicTacToe: GameBoardRequestType {
         let playerPositions = Set(playerMoves.map { $0.boardIndex })
         
         // Player wins if their positions match a win pattern
-        for pattern in winPatterns where pattern.isSubset(of: playerPositions) { return true }
+        for pattern in winPatterns where pattern.isSubset(of: playerPositions) {
+            updateWinningMoves(with: pattern)
+            return true
+        }
 
         
         // Player did not win
@@ -164,7 +189,6 @@ public class TicTacToe: GameBoardRequestType {
     
     // Checks for a draw
     private func isDraw() -> Bool {
-        print(moves.compactMap { $0 }.count)
         return moves.compactMap { $0 }.count == 9
     }
     
@@ -189,4 +213,22 @@ public class TicTacToe: GameBoardRequestType {
         return movePosition
     }
     
+    
+    private func playSound(name: String, type: String){
+        guard let url = Bundle.main.url(forResource: name, withExtension : type) else { print("Unable to locate Sound file"); return}
+
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("Unable to play sound")
+        }
+    }
+    
+    
 }
+
+
+    
+
+

@@ -11,6 +11,8 @@ public struct Move: Codable {
     let mover: Mover
     let boardIndex: Int
     
+    var isWinning = false
+    
     var indicator: String {
         return mover == .local ? "xmark" : "circle"
     }

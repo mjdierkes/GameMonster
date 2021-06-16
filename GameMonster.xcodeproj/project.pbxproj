@@ -12,6 +12,8 @@
 		F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AA2678F1CD001D2168 /* HomeView.swift */; };
 		F74334AD2678F99C001D2168 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AC2678F99C001D2168 /* Game.swift */; };
 		F74334AF2678FA7E001D2168 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AE2678FA7E001D2168 /* Home.swift */; };
+		F7C5A1DC267A93A400B62E52 /* winSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */; };
+		F7C5A1E1267AC27300B62E52 /* SquareSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */; };
 		F7EDD63026779A8900CC29E6 /* GameMonsterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */; };
 		F7EDD63226779A8900CC29E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD63126779A8900CC29E6 /* ContentView.swift */; };
 		F7EDD63426779A8B00CC29E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7EDD63326779A8B00CC29E6 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		F74334AC2678F99C001D2168 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F74334AE2678FA7E001D2168 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F74334B026796952001D2168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winSoundEffect.wav; sourceTree = "<group>"; };
+		F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SquareSoundEffect.wav; sourceTree = "<group>"; };
 		F7EDD62C26779A8900CC29E6 /* GameMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMonsterApp.swift; sourceTree = "<group>"; };
 		F7EDD63126779A8900CC29E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 		F7EDD67C26781E1400CC29E6 /* ConfettiSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */,
+				F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */,
 				F7EDD67D26781E1400CC29E6 /* Shapes */,
 			);
 			path = ConfettiSwiftUI;
@@ -374,7 +380,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7EDD63726779A8B00CC29E6 /* Preview Assets.xcassets in Resources */,
+				F7C5A1DC267A93A400B62E52 /* winSoundEffect.wav in Resources */,
 				F7EDD63426779A8B00CC29E6 /* Assets.xcassets in Resources */,
+				F7C5A1E1267AC27300B62E52 /* SquareSoundEffect.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
