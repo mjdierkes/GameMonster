@@ -15,7 +15,8 @@ struct ContentView: View {
     var body: some View {
 //        HomeView()
 //            .environmentObject(home)
-        TTTGame()
+//        TTTGame()
+        MancalaGameView()
     }
 }
 

@@ -14,14 +14,12 @@ import AVKit
 public class TicTacToe: GameBoardRequestType {
     
     
+    
     public let columns = [GridItem(.flexible()),
                           GridItem(.flexible()),
                           GridItem(.flexible())]
 
-    private let generator = UINotificationFeedbackGenerator()
-    private let impactGenerator = UIImpactFeedbackGenerator(style: .light)
-    
-    private var audioPlayer: AVAudioPlayer?
+  
 
     private let profile = Profile()
     
@@ -36,7 +34,7 @@ public class TicTacToe: GameBoardRequestType {
         sendMessage(moves: moves, audience: audience)
     }
     
-    public override func update(for move: Move) {
+    public func update(for move: TTTMove) {
         validateMove(for: move)
     }
     
@@ -49,11 +47,10 @@ public class TicTacToe: GameBoardRequestType {
         profile.saveName(name)
     }
     
-    @Published public var player = Player(id: UUID(), name: "Crazy Joe")
     
     init(){
-        self.player = profile.getDefault(for: UUID())
         super.init(type: .TicTacToe)
+        self.player = profile.getDefault(for: UUID())
     }
     
     
@@ -67,13 +64,13 @@ public class TicTacToe: GameBoardRequestType {
         isDisabled = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
             let computerPosition = determineComputerMovePosition()
-            validateMove(for: Move(mover: .opponent, boardIndex: computerPosition))
+            validateMove(for: TTTMove(mover: .opponent, boardIndex: computerPosition))
             isDisabled = false
         }
     }
     
     
-    private func validateMove(for move: Move){
+    private func validateMove(for move: TTTMove){
         
         let position = move.boardIndex
         if move.mover == .local { isDisabled = true }
@@ -83,13 +80,13 @@ public class TicTacToe: GameBoardRequestType {
         }
         
         else if !isSquareOccupied(forIndex: position){
-            moves[position] = Move(mover: move.mover, boardIndex: position)
+            moves[position] = TTTMove(mover: move.mover, boardIndex: position)
             impactGenerator.impactOccurred()
             playSound(name: "SquareSoundEffect", type: "wav")
             
             if move.mover == .local {
                 //Update opponent on local move
-                sendMessage(as: Move(mover: .opponent, boardIndex: position))
+                sendMessage(as: TTTMove(mover: .opponent, boardIndex: position))
                 if updateGameStatus() == .local {
                     gameOver()
                 }
@@ -100,16 +97,16 @@ public class TicTacToe: GameBoardRequestType {
     }
     
     
-    public override func flippedMoves() -> [Move?] {
+    public override func flippedMoves() -> [TTTMove?] {
         
-        var newMoves: [Move?] = moves
+        var newMoves: [TTTMove?] = moves
         for i in 0..<moves.count {
             if let move = moves[i] {
                 if move.mover == .local {
-                    newMoves[i] = Move(mover: .opponent, boardIndex: move.boardIndex, isWinning: move.isWinning)
+                    newMoves[i] = TTTMove(mover: .opponent, boardIndex: move.boardIndex, isWinning: move.isWinning)
                 }
                 else {
-                    newMoves[i] = Move(mover: .local, boardIndex: move.boardIndex, isWinning: move.isWinning)
+                    newMoves[i] = TTTMove(mover: .local, boardIndex: move.boardIndex, isWinning: move.isWinning)
                 }
             }
         }

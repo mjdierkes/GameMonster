@@ -21,6 +21,21 @@ class GameMonsterTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let mancala = Mancala()
+        let move = MancalaMove(mover: .local, boardIndex: 1, stones: 4)
+        
+        mancala.update(for: move)
+        mancala.update(for: MancalaMove(mover: .local, boardIndex: 4, stones: 2))
+        
+        let localMoves = mancala.localMoves
+        let opponentMoves = mancala.opponentMoves
+        
+        for i in 0..<localMoves.count {
+            print("\(localMoves[i].stones)   \(opponentMoves[i].stones)")
+        }
+        
     }
 
     func testPerformanceExample() throws {
@@ -31,3 +46,4 @@ class GameMonsterTests: XCTestCase {
     }
 
 }
+

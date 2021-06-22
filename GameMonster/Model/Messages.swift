@@ -8,10 +8,10 @@
 import Foundation
 
 struct MoveMessage: Codable {
-    let move: Move
+    let move: TTTMove
 }
 
 struct BoardMessage: Codable {
-    let moves: [Move?]
+    let moves: [TTTMove?]
     let audience: [Player]
 }

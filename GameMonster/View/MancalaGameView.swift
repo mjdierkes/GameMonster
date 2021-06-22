@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct TTTGame: View {
+struct MancalaGameView: View {
     
-    @StateObject private var game = TicTacToe()
+    @StateObject private var game = Mancala()
     
     var body: some View {
         VStack{
             Header()
-            TTTBoardView()
+            MancalaView()
             Audience()
             BottomBar()
         }
@@ -22,6 +22,7 @@ struct TTTGame: View {
         .navigationBarBackButtonHidden(true)
         .padding()
         .environmentObject(game)
+        .environmentObject(game as GameBoardRequestType)
         .task {
             for await session in PlayTogether.sessions() {
                 game.configureGroupSession(session)
@@ -33,7 +34,7 @@ struct TTTGame: View {
     }
 }
 
-struct TTCGame_Previews: PreviewProvider {
+struct MancalaGameView_Previews: PreviewProvider {
     static var previews: some View {
         TTTGame()
     }

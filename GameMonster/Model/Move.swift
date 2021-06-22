@@ -7,14 +7,37 @@
 
 import Foundation
 
-public struct Move: Codable {
-    let mover: Mover
-    let boardIndex: Int
+public protocol Move: Codable{
+    var mover: Mover { get }
+    var boardIndex: Int { get }
+}
+
+public struct TTTMove: Move {
+    public let mover: Mover
+    public let boardIndex: Int
     
-    var isWinning = false
-    
-    var indicator: String {
+    public var isWinning = false
+
+    public var indicator: String {
         return mover == .local ? "xmark" : "circle"
     }
 }
+
+
+public struct MancalaMove: Move, Identifiable{
+    public var id = UUID()
+    
+    public let mover: Mover
+    public let boardIndex: Int
+    
+    public var stones: Int
+}
+
+
+
+
+
+
+
+
 

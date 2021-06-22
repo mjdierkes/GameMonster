@@ -8,13 +8,15 @@
 import Foundation
 import Combine
 import GroupActivities
+import SwiftUI
+import AVKit
 
 public protocol GameBoard: ObservableObject {
     
     var name: String { get }
     
     var isDisabled: Bool { get set }
-    var moves: [Move?] { get set }
+    var moves: [TTTMove?] { get set }
     
     var audience: [Player] { get set }
     var opponent: Player { get set }
@@ -33,12 +35,17 @@ public protocol GameBoard: ObservableObject {
 public class GameBoardRequestType: GameBoard, ObservableObject{
     
     public let type: GameType
-
+    
+    internal let generator = UINotificationFeedbackGenerator()
+    internal let impactGenerator = UIImpactFeedbackGenerator(style: .light)
+    internal var audioPlayer: AVAudioPlayer?
+    
     // Game modifiers
     @Published public var isDisabled = false
-    @Published public var moves: [Move?] = Array(repeating: nil, count: 9)
+    @Published public var moves: [TTTMove?] = Array(repeating: nil, count: 9)
     
     @Published public var audience = [Player]()
+    @Published public var player = Player(id: UUID(), name: "Default")
     @Published public var opponent = Player(id: UUID(), name: "Default")
     @Published public var wins = 0
     
@@ -46,10 +53,8 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
         switch type {
         case .TicTacToe:
             return "TicTacToe"
-        case .Chess:
-            return "Chess"
-        case .Connect4:
-            return "Connect4"
+        case .Mancala:
+            return "Mancala"
         }
     }
     
@@ -58,13 +63,16 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
         self.type = type
     }
     
-    public func reset(){}
+    public func reset(){
+        print("reset")
+        reset()
+    }
     
     public func update(for move: Move){}
 
     public func removeGame(){}
     
-    public func flippedMoves() -> [Move?]{ return moves }
+    public func flippedMoves() -> [TTTMove?]{ return moves }
     
     
     public var tasks = Set<Task.Handle<Void, Never>>()
@@ -82,5 +90,5 @@ public enum GameStatus {
 }
 
 public enum GameType {
-    case TicTacToe, Chess, Connect4
+    case TicTacToe, Mancala
 }

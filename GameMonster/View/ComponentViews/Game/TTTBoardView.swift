@@ -22,7 +22,7 @@ struct TTTBoardView: View {
                                             viewModel.moves[i]?.indicator ?? nil, isWinning: viewModel.moves[i]?.isWinning ?? false)
                             }
                             .onTapGesture {
-                                viewModel.update(for: Move(mover: .local, boardIndex: i))
+                                viewModel.update(for: TTTMove(mover: .local, boardIndex: i))
                             }
                         }
                     }

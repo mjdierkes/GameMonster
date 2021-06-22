@@ -10,7 +10,7 @@ import GroupActivities
 
 struct BottomBar: View {
     
-    @EnvironmentObject var game: TicTacToe
+    @EnvironmentObject var game: GameBoardRequestType
     @StateObject var groupStateObserver = GroupStateObserver()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 

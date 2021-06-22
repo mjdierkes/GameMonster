@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Audience: View {
     
-    @EnvironmentObject var game: TicTacToe
+    @EnvironmentObject var game: GameBoardRequestType
     
     var body: some View {
         

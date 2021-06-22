@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Header: View {
     
-    @EnvironmentObject var game: TicTacToe
+    @EnvironmentObject var game: GameBoardRequestType
     @State private var presentModal = false
     
     var body: some View {
