@@ -36,6 +36,7 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
     
     public let type: GameType
     
+    private let profile = Profile()
     internal let generator = UINotificationFeedbackGenerator()
     internal let impactGenerator = UIImpactFeedbackGenerator(style: .light)
     internal var audioPlayer: AVAudioPlayer?
@@ -52,7 +53,7 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
     public var name: String {
         switch type {
         case .TicTacToe:
-            return "TicTacToe"
+            return "Tic Tac Toe"
         case .Mancala:
             return "Mancala"
         }
@@ -74,7 +75,10 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
     
     public func flippedMoves() -> [TTTMove?]{ return moves }
     
-    
+    public func updateProfile(name: String){
+        profile.saveName(name)
+    }
+
     public var tasks = Set<Task.Handle<Void, Never>>()
     public var subscriptions = Set<AnyCancellable>()
     

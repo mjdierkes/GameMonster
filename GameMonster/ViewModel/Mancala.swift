@@ -10,7 +10,7 @@ import Foundation
 public class Mancala: GameBoardRequestType {
 
 
-    private let profile = Profile()
+    
     private var manMoves = [MancalaMove]()
     
     @Published public var localMoves = [MancalaMove]()
@@ -46,10 +46,7 @@ public class Mancala: GameBoardRequestType {
         
     }
     
-    public func updateProfile(name: String){
-        profile.saveName(name)
-    }
-    
+        
     
     init(){
         super.init(type: .Mancala)

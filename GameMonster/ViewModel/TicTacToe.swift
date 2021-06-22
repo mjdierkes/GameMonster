@@ -42,17 +42,12 @@ public class TicTacToe: GameBoardRequestType {
     public override func removeGame() {
         
     }
-    
-    public func updateProfile(name: String){
-        profile.saveName(name)
-    }
-    
+
     
     init(){
         super.init(type: .TicTacToe)
         self.player = profile.getDefault(for: UUID())
     }
-    
     
     
 
