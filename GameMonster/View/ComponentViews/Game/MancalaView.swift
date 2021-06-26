@@ -30,9 +30,10 @@ struct MancalaView: View {
                         }
                     }
                     VStack{
-                        ForEach(game.opponentMoves){ move in
+                        ForEach(game.opponentMoves.reversed()){ move in
                             if move.boardIndex != 7 {
                                 PocketView(for: move)
+                                    .onTapGesture(perform: { game.update(for: move) })
                             }
                         }
                     }

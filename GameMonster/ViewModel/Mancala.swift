@@ -18,7 +18,7 @@ public class Mancala: GameBoardRequestType {
 
     // Resets GameBoard back to initial state
     public override func reset() {
-        for i in 0..<14 {
+        for i in 0..<15 {
             // Start of local Moves
             if i == 0 {
                 manMoves.append(MancalaMove(mover: .local, boardIndex: i, stones: 0))
@@ -62,12 +62,18 @@ public class Mancala: GameBoardRequestType {
             if mover == .opponent { return 0 }
             else { return 7 }
         }
+        
+        // Take stones from selected pocket
         manMoves[position].stones = 0
         position += 1
         
+    
+        // Place a stone into each pocket
         while moveCount > 0 {
-            if position != startIndex { manMoves[position].stones += 1 }
-            else { moveCount += 1 }
+            print(position)
+            manMoves[position].stones += 1
+//            if position != startIndex { manMoves[position].stones += 1 }
+//            else { moveCount += 1 }
             
             if position == manMoves.count - 1 { position = 0 }
             
@@ -75,11 +81,12 @@ public class Mancala: GameBoardRequestType {
             moveCount -= 1
         }
         
+        // Check game status
         print(updateGameStatus())
         
+        // Separate moves into respected Arrays
         localMoves = manMoves.chunked(into: 7)[0]
         opponentMoves = manMoves.chunked(into: 7)[1]
-        
     }
     
     private func updateGameStatus() -> GameStatus {

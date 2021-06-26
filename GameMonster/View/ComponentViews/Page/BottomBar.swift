@@ -14,6 +14,7 @@ struct BottomBar: View {
     @StateObject var groupStateObserver = GroupStateObserver()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
+    
     var body: some View {
         HStack{
             Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
