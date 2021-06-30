@@ -34,6 +34,12 @@ public struct MancalaMove: Move, Identifiable{
 }
 
 
+public struct ConnectMove: Move {
+    public var mover: Mover
+    public var boardIndex: Int
+    public var column: Int
+}
+
 
 
 

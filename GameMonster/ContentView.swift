@@ -10,13 +10,15 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var home = Home()
-   
+    @StateObject private var game = ConnectFour()
     
     var body: some View {
 //        HomeView()
 //            .environmentObject(home)
 //        TTTGame()
-        MancalaGameView()
+//        MancalaGameView()
+        ConnectFourView()
+            .environmentObject(game)
     }
 }
 

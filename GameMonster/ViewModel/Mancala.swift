@@ -9,8 +9,6 @@ import Foundation
 
 public class Mancala: GameBoardRequestType {
 
-
-    
     private var manMoves = [MancalaMove]()
     
     @Published public var localMoves = [MancalaMove]()

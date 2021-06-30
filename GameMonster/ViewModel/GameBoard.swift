@@ -56,6 +56,8 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
             return "Tic Tac Toe"
         case .Mancala:
             return "Mancala"
+        case .ConnectFour:
+            return "Connect Four"
         }
     }
     
@@ -94,5 +96,5 @@ public enum GameStatus {
 }
 
 public enum GameType {
-    case TicTacToe, Mancala
+    case TicTacToe, Mancala, ConnectFour
 }

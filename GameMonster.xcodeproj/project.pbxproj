@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9334D0022688BFEB006F5164 /* ConnectFourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D0012688BFEB006F5164 /* ConnectFourModel.swift */; };
+		9334D0042688F42D006F5164 /* ConnectFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D0032688F42D006F5164 /* ConnectFourView.swift */; };
+		9334D00626890587006F5164 /* ConnectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D00526890587006F5164 /* ConnectFour.swift */; };
 		F7116C7E26815886002818B8 /* MancalaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C7D26815886002818B8 /* MancalaView.swift */; };
 		F7116C8026815D3F002818B8 /* MancalaGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C7F26815D3F002818B8 /* MancalaGameView.swift */; };
 		F7116C82268161BA002818B8 /* PocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C81268161BA002818B8 /* PocketView.swift */; };
@@ -63,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9334D0012688BFEB006F5164 /* ConnectFourModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourModel.swift; sourceTree = "<group>"; };
+		9334D0032688F42D006F5164 /* ConnectFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourView.swift; sourceTree = "<group>"; };
+		9334D00526890587006F5164 /* ConnectFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFour.swift; sourceTree = "<group>"; };
+		93449EE926882C4500F63E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7116C7D26815886002818B8 /* MancalaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaView.swift; sourceTree = "<group>"; };
 		F7116C7F26815D3F002818B8 /* MancalaGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaGameView.swift; sourceTree = "<group>"; };
 		F7116C81268161BA002818B8 /* PocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketView.swift; sourceTree = "<group>"; };
@@ -72,14 +79,13 @@
 		F74334AA2678F1CD001D2168 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F74334AC2678F99C001D2168 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F74334AE2678FA7E001D2168 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		F74334B026796952001D2168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winSoundEffect.wav; sourceTree = "<group>"; };
 		F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SquareSoundEffect.wav; sourceTree = "<group>"; };
 		F7CB31E3267E505B005E83F5 /* Mancala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mancala.swift; sourceTree = "<group>"; };
 		F7EDD62C26779A8900CC29E6 /* GameMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMonsterApp.swift; sourceTree = "<group>"; };
 		F7EDD63126779A8900CC29E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F7EDD63326779A8B00CC29E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7EDD63326779A8B00CC29E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = GameMonster/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		F7EDD63626779A8B00CC29E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7EDD63C26779A8B00CC29E6 /* GameMonsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameMonsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EDD64026779A8B00CC29E6 /* GameMonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMonsterTests.swift; sourceTree = "<group>"; };
@@ -154,7 +160,7 @@
 		F7EDD62E26779A8900CC29E6 /* GameMonster */ = {
 			isa = PBXGroup;
 			children = (
-				F74334B026796952001D2168 /* Info.plist */,
+				93449EE926882C4500F63E50 /* Info.plist */,
 				F7EDD68C267855D700CC29E6 /* GameMonster.entitlements */,
 				F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */,
 				F7EDD63126779A8900CC29E6 /* ContentView.swift */,
@@ -195,6 +201,7 @@
 		F7EDD65726779A9F00CC29E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9334D0012688BFEB006F5164 /* ConnectFourModel.swift */,
 				F7EDD65C26779B6800CC29E6 /* Player.swift */,
 				F7EDD65E26779E0E00CC29E6 /* Move.swift */,
 				F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */,
@@ -222,6 +229,7 @@
 			children = (
 				F7EDD65A26779B0C00CC29E6 /* GameBoard.swift */,
 				F7CB31E3267E505B005E83F5 /* Mancala.swift */,
+				9334D00526890587006F5164 /* ConnectFour.swift */,
 				F7EDD66026779EF100CC29E6 /* TicTacToe.swift */,
 				F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */,
 				F74334A82678E08D001D2168 /* Profile.swift */,
@@ -282,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */,
+				9334D0032688F42D006F5164 /* ConnectFourView.swift */,
 				F7116C7D26815886002818B8 /* MancalaView.swift */,
 				F7116C81268161BA002818B8 /* PocketView.swift */,
 				F7116C832681771D002818B8 /* StoreView.swift */,
@@ -438,6 +447,8 @@
 				F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */,
 				F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */,
 				F7EDD6712677C4D800CC29E6 /* TTTGame.swift in Sources */,
+				9334D0022688BFEB006F5164 /* ConnectFourModel.swift in Sources */,
+				9334D0042688F42D006F5164 /* ConnectFourView.swift in Sources */,
 				F7EDD6792677D4F800CC29E6 /* BottomBar.swift in Sources */,
 				F7EDD63026779A8900CC29E6 /* GameMonsterApp.swift in Sources */,
 				F7116C8026815D3F002818B8 /* MancalaGameView.swift in Sources */,
@@ -448,6 +459,7 @@
 				F7116C82268161BA002818B8 /* PocketView.swift in Sources */,
 				F7EDD68B2678556500CC29E6 /* GroupSessionManager.swift in Sources */,
 				F7CB31E4267E505B005E83F5 /* Mancala.swift in Sources */,
+				9334D00626890587006F5164 /* ConnectFour.swift in Sources */,
 				F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */,
 				F74334AF2678FA7E001D2168 /* Home.swift in Sources */,
 				F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */,

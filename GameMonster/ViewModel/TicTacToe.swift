@@ -7,19 +7,16 @@
 
 import Foundation
 import SwiftUI
-import Combine
-import GroupActivities
 import AVKit
 
+
+
 public class TicTacToe: GameBoardRequestType {
-    
-    
     
     public let columns = [GridItem(.flexible()),
                           GridItem(.flexible()),
                           GridItem(.flexible())]
 
-  
 
     private let profile = Profile()
     
