@@ -11,7 +11,8 @@ struct CellView : View {
     let cell: Token
     let proxy: GeometryProxy
     
-    @State private var offset: CGFloat = -300
+    @State private var animate = false
+    
     private let scale = 0.125
     
     var body: some View {
@@ -30,10 +31,12 @@ struct CellView : View {
                     .foregroundColor(cell.color)
                     .padding(6)
                     .frame(width: proxy.size.width * scale, height: proxy.size.width * scale)
-                    .offset(y:offset)
+                    .offset(y: animate ? 0 : -300)
+                    .animation(.interpolatingSpring(stiffness: 150, damping: 17, initialVelocity: 0.5))
                     .onAppear {
-                        withAnimation(.easeIn(duration: 0.4)) { self.offset = 0 }
-                              }
+                        animate = true
+                    }
+
             }
          
 

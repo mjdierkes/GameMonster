@@ -26,8 +26,9 @@ public final class ConnectFour: GameBoardRequestType {
               let row = board[column].lastIndex(of: .empty)
               else { return }
         
-        impactGenerator.impactOccurred()
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.impactGenerator.impactOccurred()
+        }
         board[column][row] = activePlayer.cell
         activePlayer.toggle()
         

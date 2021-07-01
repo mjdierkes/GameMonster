@@ -31,11 +31,11 @@ struct ConnectBoardView: View {
                                 }
                             
                                 .onTapGesture {
-                                    withAnimation(.easeIn) {
-                                        self.game.update(at: xOffset)
-                                    }
+                                    self.game.update(at: xOffset)
                                 }
                             }
+                            .animation(.interpolatingSpring(mass: 1, stiffness: 1, damping: 0.5, initialVelocity: 10), value: 45)
+
                             
 
                         }
