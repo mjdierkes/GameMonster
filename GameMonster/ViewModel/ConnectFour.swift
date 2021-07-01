@@ -8,36 +8,89 @@
 import Foundation
 import SwiftUI
 
-public class ConnectFour: GameBoardRequestType {
+public final class ConnectFour: GameBoardRequestType {
     
-    public static let width = 7
-    public static let height = 6
-    
-    public let columns = [GridItem](repeating: GridItem(.flexible()), count: ConnectFour.width)
-    @Published public var slots: [ChipColor]
+    @Published private(set) var board: [[Token]]
+    @Published public var activePlayer: ActivePlayer = .red
     
     
-    private var board = ConnectFourModel()
-    
-    
-    public init(){
-        slots = board.slots
+    public init(columns: Int = 7, rows: Int = 6){
+        let emptyRow = [Token](repeating: .empty, count: rows)
+        board = [[Token]](repeating: emptyRow, count: columns)
         super.init(type: .ConnectFour)
     }
     
     
-    public func update(for move: ConnectMove) {
+    public func update(at column: Int){
+        guard (0..<board.count) ~= column,
+              let row = board[column].lastIndex(of: .empty)
+              else { return }
         
-        print("Update Called For: \(move.boardIndex)")
-        if let row = board.nextEmptySlot(in: move.column) {
-            if move.mover == .local {  board.add(chip: .red, in: move.column) }
-            else if move.mover == .opponent {  board.add(chip: .yellow, in: move.column) }
-        }
+        impactGenerator.impactOccurred()
+
+        board[column][row] = activePlayer.cell
+        activePlayer.toggle()
         
-        slots = board.slots
-        
+        if winner != nil { print(winner)}
     }
     
+    public override func reset(){
+        board = board.map{ $0.map { _ in return .empty }}
+        activePlayer = .red
+    }
+    
+    public var winner: ActivePlayer? {
+        for player in ActivePlayer.allCases {
+            // Check horizontal win
+            for x in 0..<board.count - 3 {
+                for y in 0..<board[0].count {
+                    if board[x][y] == player.cell,
+                        board[x + 1][y] == player.cell,
+                        board[x + 2][y] == player.cell,
+                        board[x + 3][y] == player.cell {
+                        return player
+                    }
+                }
+            }
+
+            // Check vertical win
+            for x in 0..<board.count {
+                for y in 0..<board[0].count - 3 {
+                    if board[x][y] == player.cell,
+                        board[x][y + 1] == player.cell,
+                        board[x][y + 2] == player.cell,
+                        board[x][y + 3] == player.cell {
+                        return player
+                    }
+                }
+            }
+
+            // Check for diagonal ascending win
+            for x in 0..<board.count - 3 {
+                for y in 3..<board[0].count {
+                    if board[x][y] == player.cell,
+                        board[x + 1][y - 1] == player.cell,
+                        board[x + 2][y - 2] == player.cell,
+                        board[x + 3][y - 3] == player.cell {
+                        return player
+                    }
+                }
+            }
+
+            // Check for diagonal ascending win
+            for x in 0..<board.count - 3 {
+                for y in 0..<board[0].count - 3 {
+                    if board[x][y] == player.cell,
+                        board[x + 1][y + 1] == player.cell,
+                        board[x + 2][y + 2] == player.cell,
+                        board[x + 3][y + 3] == player.cell {
+                        return player
+                    }
+                }
+            }
+        }
+        return nil
+    }
     
     
     

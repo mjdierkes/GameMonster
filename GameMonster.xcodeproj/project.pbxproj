@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9334D0022688BFEB006F5164 /* ConnectFourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D0012688BFEB006F5164 /* ConnectFourModel.swift */; };
-		9334D0042688F42D006F5164 /* ConnectFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D0032688F42D006F5164 /* ConnectFourView.swift */; };
+		9334D0022688BFEB006F5164 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D0012688BFEB006F5164 /* Token.swift */; };
+		9334D0042688F42D006F5164 /* ConnectBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D0032688F42D006F5164 /* ConnectBoardView.swift */; };
 		9334D00626890587006F5164 /* ConnectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D00526890587006F5164 /* ConnectFour.swift */; };
 		F7116C7E26815886002818B8 /* MancalaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C7D26815886002818B8 /* MancalaView.swift */; };
 		F7116C8026815D3F002818B8 /* MancalaGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C7F26815D3F002818B8 /* MancalaGameView.swift */; };
 		F7116C82268161BA002818B8 /* PocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C81268161BA002818B8 /* PocketView.swift */; };
 		F7116C842681771D002818B8 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C832681771D002818B8 /* StoreView.swift */; };
+		F72EF841268E2AFA00885CC0 /* ConnectFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */; };
 		F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A62678DF4C001D2168 /* ProfileView.swift */; };
 		F74334A92678E08D001D2168 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A82678E08D001D2168 /* Profile.swift */; };
 		F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AA2678F1CD001D2168 /* HomeView.swift */; };
@@ -46,6 +47,7 @@
 		F7EDD68B2678556500CC29E6 /* GroupSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */; };
 		F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */; };
 		F7EDD6902678618C00CC29E6 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD68F2678618C00CC29E6 /* Messages.swift */; };
+		F7F76745268D678400497EA2 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F76744268D678400497EA2 /* CellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,14 +68,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9334D0012688BFEB006F5164 /* ConnectFourModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourModel.swift; sourceTree = "<group>"; };
-		9334D0032688F42D006F5164 /* ConnectFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourView.swift; sourceTree = "<group>"; };
+		9334D0012688BFEB006F5164 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		9334D0032688F42D006F5164 /* ConnectBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectBoardView.swift; sourceTree = "<group>"; };
 		9334D00526890587006F5164 /* ConnectFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFour.swift; sourceTree = "<group>"; };
 		93449EE926882C4500F63E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7116C7D26815886002818B8 /* MancalaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaView.swift; sourceTree = "<group>"; };
 		F7116C7F26815D3F002818B8 /* MancalaGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaGameView.swift; sourceTree = "<group>"; };
 		F7116C81268161BA002818B8 /* PocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketView.swift; sourceTree = "<group>"; };
 		F7116C832681771D002818B8 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourView.swift; sourceTree = "<group>"; };
 		F74334A62678DF4C001D2168 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F74334A82678E08D001D2168 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F74334AA2678F1CD001D2168 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		F7EDD68C267855D700CC29E6 /* GameMonster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameMonster.entitlements; sourceTree = "<group>"; };
 		F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTogether.swift; sourceTree = "<group>"; };
 		F7EDD68F2678618C00CC29E6 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		F7F76744268D678400497EA2 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +205,7 @@
 		F7EDD65726779A9F00CC29E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9334D0012688BFEB006F5164 /* ConnectFourModel.swift */,
+				9334D0012688BFEB006F5164 /* Token.swift */,
 				F7EDD65C26779B6800CC29E6 /* Player.swift */,
 				F7EDD65E26779E0E00CC29E6 /* Move.swift */,
 				F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */,
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				F7EDD6702677C4D800CC29E6 /* TTTGame.swift */,
+				F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */,
 				F7116C7F26815D3F002818B8 /* MancalaGameView.swift */,
 				F74334AA2678F1CD001D2168 /* HomeView.swift */,
 				F74334A62678DF4C001D2168 /* ProfileView.swift */,
@@ -290,11 +295,12 @@
 			isa = PBXGroup;
 			children = (
 				F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */,
-				9334D0032688F42D006F5164 /* ConnectFourView.swift */,
+				9334D0032688F42D006F5164 /* ConnectBoardView.swift */,
 				F7116C7D26815886002818B8 /* MancalaView.swift */,
 				F7116C81268161BA002818B8 /* PocketView.swift */,
 				F7116C832681771D002818B8 /* StoreView.swift */,
 				F7EDD66C2677B62700CC29E6 /* SquareView.swift */,
+				F7F76744268D678400497EA2 /* CellView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -442,19 +448,21 @@
 				F7EDD68226781E3400CC29E6 /* ConfettiSwiftUI.swift in Sources */,
 				F7116C7E26815886002818B8 /* MancalaView.swift in Sources */,
 				F7EDD63226779A8900CC29E6 /* ContentView.swift in Sources */,
+				F72EF841268E2AFA00885CC0 /* ConnectFourView.swift in Sources */,
 				F7EDD65B26779B0C00CC29E6 /* GameBoard.swift in Sources */,
 				F7EDD6772677C88C00CC29E6 /* Audience.swift in Sources */,
 				F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */,
 				F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */,
 				F7EDD6712677C4D800CC29E6 /* TTTGame.swift in Sources */,
-				9334D0022688BFEB006F5164 /* ConnectFourModel.swift in Sources */,
-				9334D0042688F42D006F5164 /* ConnectFourView.swift in Sources */,
+				9334D0022688BFEB006F5164 /* Token.swift in Sources */,
+				9334D0042688F42D006F5164 /* ConnectBoardView.swift in Sources */,
 				F7EDD6792677D4F800CC29E6 /* BottomBar.swift in Sources */,
 				F7EDD63026779A8900CC29E6 /* GameMonsterApp.swift in Sources */,
 				F7116C8026815D3F002818B8 /* MancalaGameView.swift in Sources */,
 				F7EDD68326781E4300CC29E6 /* RoundedCross.swift in Sources */,
 				F7EDD66D2677B62700CC29E6 /* SquareView.swift in Sources */,
 				F7EDD6902678618C00CC29E6 /* Messages.swift in Sources */,
+				F7F76745268D678400497EA2 /* CellView.swift in Sources */,
 				F7116C842681771D002818B8 /* StoreView.swift in Sources */,
 				F7116C82268161BA002818B8 /* PocketView.swift in Sources */,
 				F7EDD68B2678556500CC29E6 /* GroupSessionManager.swift in Sources */,

@@ -15,3 +15,15 @@ public struct Player: Identifiable, Codable {
 public enum Mover: Codable {
     case local, opponent
 }
+
+
+public enum ActivePlayer: CaseIterable{
+    case red, yellow
+    
+    mutating func toggle() {
+        switch self {
+        case .red: self = .yellow
+        case .yellow: self = .red
+        }
+    }
+}
