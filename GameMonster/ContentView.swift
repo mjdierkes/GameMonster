@@ -13,12 +13,12 @@ struct ContentView: View {
     @StateObject private var game = ConnectFour()
     
     var body: some View {
-//        HomeView()
-//            .environmentObject(home)
+        HomeView()
+            .environmentObject(home)
 //        TTTGame()
 //        MancalaGameView()
-        ConnectFourView()
-            .environmentObject(game)
+//        ConnectFourView()
+//            .environmentObject(game)
     }
 }
 

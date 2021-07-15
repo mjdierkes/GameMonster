@@ -14,13 +14,14 @@
 		F7116C8026815D3F002818B8 /* MancalaGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C7F26815D3F002818B8 /* MancalaGameView.swift */; };
 		F7116C82268161BA002818B8 /* PocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C81268161BA002818B8 /* PocketView.swift */; };
 		F7116C842681771D002818B8 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C832681771D002818B8 /* StoreView.swift */; };
+		F724C3B6269DE4E400A85219 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B5269DE4E400A85219 /* GameButton.swift */; };
+		F724C3B8269E030500A85219 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B7269E030500A85219 /* Home.swift */; };
+		F724C3BA269FBEEA00A85219 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B9269FBEEA00A85219 /* OnBoardingView.swift */; };
 		F72EF841268E2AFA00885CC0 /* ConnectFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */; };
-		F72EF844268E673600885CC0 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF842268E671800885CC0 /* Testing.swift */; };
 		F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A62678DF4C001D2168 /* ProfileView.swift */; };
 		F74334A92678E08D001D2168 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A82678E08D001D2168 /* Profile.swift */; };
 		F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AA2678F1CD001D2168 /* HomeView.swift */; };
 		F74334AD2678F99C001D2168 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AC2678F99C001D2168 /* Game.swift */; };
-		F74334AF2678FA7E001D2168 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AE2678FA7E001D2168 /* Home.swift */; };
 		F7C5A1DC267A93A400B62E52 /* winSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */; };
 		F7C5A1E1267AC27300B62E52 /* SquareSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */; };
 		F7CB31E4267E505B005E83F5 /* Mancala.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB31E3267E505B005E83F5 /* Mancala.swift */; };
@@ -77,13 +78,14 @@
 		F7116C7F26815D3F002818B8 /* MancalaGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaGameView.swift; sourceTree = "<group>"; };
 		F7116C81268161BA002818B8 /* PocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketView.swift; sourceTree = "<group>"; };
 		F7116C832681771D002818B8 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		F724C3B5269DE4E400A85219 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
+		F724C3B7269E030500A85219 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F724C3B9269FBEEA00A85219 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourView.swift; sourceTree = "<group>"; };
-		F72EF842268E671800885CC0 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		F74334A62678DF4C001D2168 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F74334A82678E08D001D2168 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F74334AA2678F1CD001D2168 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F74334AC2678F99C001D2168 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		F74334AE2678FA7E001D2168 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winSoundEffect.wav; sourceTree = "<group>"; };
 		F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SquareSoundEffect.wav; sourceTree = "<group>"; };
 		F7CB31E3267E505B005E83F5 /* Mancala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mancala.swift; sourceTree = "<group>"; };
@@ -170,7 +172,6 @@
 				F7EDD68C267855D700CC29E6 /* GameMonster.entitlements */,
 				F7EDD62F26779A8900CC29E6 /* GameMonsterApp.swift */,
 				F7EDD63126779A8900CC29E6 /* ContentView.swift */,
-				F72EF842268E671800885CC0 /* Testing.swift */,
 				F7EDD65726779A9F00CC29E6 /* Model */,
 				F7EDD65826779AAD00CC29E6 /* View */,
 				F7EDD65926779ABC00CC29E6 /* ViewModel */,
@@ -226,6 +227,7 @@
 				F7116C7F26815D3F002818B8 /* MancalaGameView.swift */,
 				F74334AA2678F1CD001D2168 /* HomeView.swift */,
 				F74334A62678DF4C001D2168 /* ProfileView.swift */,
+				F724C3B9269FBEEA00A85219 /* OnBoardingView.swift */,
 				F7EDD6862678532C00CC29E6 /* ComponentViews */,
 				F7EDD6872678534A00CC29E6 /* Confetti */,
 			);
@@ -241,7 +243,7 @@
 				F7EDD66026779EF100CC29E6 /* TicTacToe.swift */,
 				F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */,
 				F74334A82678E08D001D2168 /* Profile.swift */,
-				F74334AE2678FA7E001D2168 /* Home.swift */,
+				F724C3B7269E030500A85219 /* Home.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,6 +292,7 @@
 				F7EDD6722677C5E400CC29E6 /* Header.swift */,
 				F7EDD6742677C60700CC29E6 /* PlayerTag.swift */,
 				F7EDD6782677D4F800CC29E6 /* BottomBar.swift */,
+				F724C3B5269DE4E400A85219 /* GameButton.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */,
 				F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */,
 				F7EDD6712677C4D800CC29E6 /* TTTGame.swift in Sources */,
+				F724C3BA269FBEEA00A85219 /* OnBoardingView.swift in Sources */,
 				9334D0022688BFEB006F5164 /* Token.swift in Sources */,
 				9334D0042688F42D006F5164 /* ConnectBoardView.swift in Sources */,
 				F7EDD6792677D4F800CC29E6 /* BottomBar.swift in Sources */,
@@ -467,13 +471,13 @@
 				F7EDD6902678618C00CC29E6 /* Messages.swift in Sources */,
 				F7F76745268D678400497EA2 /* CellView.swift in Sources */,
 				F7116C842681771D002818B8 /* StoreView.swift in Sources */,
+				F724C3B8269E030500A85219 /* Home.swift in Sources */,
+				F724C3B6269DE4E400A85219 /* GameButton.swift in Sources */,
 				F7116C82268161BA002818B8 /* PocketView.swift in Sources */,
 				F7EDD68B2678556500CC29E6 /* GroupSessionManager.swift in Sources */,
 				F7CB31E4267E505B005E83F5 /* Mancala.swift in Sources */,
-				F72EF844268E673600885CC0 /* Testing.swift in Sources */,
 				9334D00626890587006F5164 /* ConnectFour.swift in Sources */,
 				F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */,
-				F74334AF2678FA7E001D2168 /* Home.swift in Sources */,
 				F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */,
 				F7EDD68426781E4300CC29E6 /* Triangle.swift in Sources */,
 			);

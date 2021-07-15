@@ -17,14 +17,6 @@ struct BottomBar: View {
     
     var body: some View {
         HStack{
-            Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
-                ZStack{
-                    Circle()
-                        .foregroundColor(Color("Offwhite"))
-                        .frame(width: 35, height: 35)
-                    Image(systemName: "xmark")
-                }
-            }
             Spacer()
             if game.session == nil && groupStateObserver.isEligibleForGroupSession {
                 Button(action: {PlayTogether().activate()

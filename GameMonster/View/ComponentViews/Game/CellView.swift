@@ -32,9 +32,10 @@ struct CellView : View {
                     .padding(6)
                     .frame(width: proxy.size.width * scale, height: proxy.size.width * scale)
                     .offset(y: animate ? 0 : -300)
-                    .animation(.interpolatingSpring(stiffness: 150, damping: 17, initialVelocity: 0.5))
                     .onAppear {
-                        animate = true
+                        withAnimation(.interpolatingSpring(stiffness: 150, damping: 17, initialVelocity: 0.5)){
+                            animate = true
+                        }
                     }
 
             }

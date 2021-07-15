@@ -35,10 +35,10 @@ public protocol GameBoard: ObservableObject {
 public class GameBoardRequestType: GameBoard, ObservableObject{
     
     public let type: GameType
-    
+    public let impactGenerator = UIImpactFeedbackGenerator(style: .light)
+
     private let profile = Profile()
     internal let generator = UINotificationFeedbackGenerator()
-    internal let impactGenerator = UIImpactFeedbackGenerator(style: .light)
     internal var audioPlayer: AVAudioPlayer?
     
     // Game modifiers
@@ -49,6 +49,7 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
     @Published public var player = Player(id: UUID(), name: "Default")
     @Published public var opponent = Player(id: UUID(), name: "Default")
     @Published public var wins = 0
+    
     
     public var name: String {
         switch type {

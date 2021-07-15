@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GroupActivities
 
 struct HomeView: View {
     
@@ -15,56 +16,64 @@ struct HomeView: View {
     
     @EnvironmentObject var home: Home
     @State private var isPresented = false
+    @State private var gameNum = -1
+    @StateObject var groupStateObserver = GroupStateObserver()
 
+    private let groupSessionManager = GameBoardRequestType(type: .TicTacToe)
+    
     var body: some View {
       
-        NavigationView {
-            VStack{
-                Text("Games")
-                    .fontWeight(.heavy).font(.title)
-                LazyVGrid(columns: columns, spacing: 35) {
-                    ForEach(home.games) { game in
-                        
-                        NavigationLink(destination: TTTGame()){
-                            VStack{
-                                ZStack{
-                                    RoundedRectangle(cornerRadius: 19)
-                                        .foregroundColor(Color("Offwhite"))
-                                        .frame(width: 100, height: 100)
-                                    
-                                    if game.wins > 0 {
-                                        HStack{
-                                            Text("\(game.wins)")
-                                                .bold()
-                                                .font(.system(size: 12))
-                                                .offset(x: 5)
-                                            Image(systemName: "crown.fill")
-                                                .resizable()
-                                                .foregroundColor(Color.yellow)
-                                                .frame(width: 15, height: 12)
-                                        }
-                                        .offset(x: 22, y: -32)
+        
+//        if groupStateObserver.isEligibleForGroupSession {
+            ZStack{
+                
+                if home.show {
+                    switch gameNum {
+                    case 0:
+                        TTTGame()
+                    default:
+                        ZStack{}
+                    }
+                }
+                
+                else {
+                    VStack{
+                        Text("Games")
+                            .fontWeight(.heavy).font(.title).padding(.top)
+                        LazyVGrid(columns: columns, spacing: 35) {
+
+                            GameButton(game: Game(name: "Tic Tac Toe", coverImage: nil))
+                                
+                                .onTapGesture(perform: {
+                                    gameNum = 0
+                                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0.8)){
+                                        groupSessionManager.impactGenerator.impactOccurred()
+                                        home.show = true
                                     }
                                     
-                                }
-                               
-                                Text(game.name)
-                                    .font(.subheadline)
-                                    .bold()
-                            }
-                            .accentColor(Color.black)
+                                })
 
-                          
-                        }
+                        }.padding()
+                        Spacer()
+//                            .onAppear(perform: {
+//                                print(groupSessionManager.session)
+//                                print(groupStateObserver.isEligibleForGroupSession)
+//                                if groupSessionManager.session == nil && groupStateObserver.isEligibleForGroupSession {
+//                                    PlayTogether().activate()
+//                                    print("Automatically Enabled Group Session")
+//                                }
+//                            })
+                      
+                        
                         
                     }
-                   
-                }.padding()
-                Spacer()
+                        
+                }
+                
             }
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
-        }
+//        }
+        
+      
         
         
         

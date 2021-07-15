@@ -8,11 +8,16 @@
 import Foundation
 import SwiftUI
 
-public struct Game: Identifiable{
+public class Game: Identifiable, ObservableObject{
     public var id = UUID()
     
     let name: String
     let coverImage: Image?
+    
+    public init(name: String, coverImage: Image?){
+        self.name = name
+        self.coverImage = coverImage
+    }
     
     
     let defaults = UserDefaults.standard

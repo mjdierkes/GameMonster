@@ -22,6 +22,7 @@ struct TTTGame: View {
         .navigationBarBackButtonHidden(true)
         .padding()
         .environmentObject(game)
+        .environmentObject(game as GameBoardRequestType)
         .task {
             for await session in PlayTogether.sessions() {
                 game.configureGroupSession(session)

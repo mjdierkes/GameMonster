@@ -72,6 +72,18 @@ public extension GameBoardRequestType {
         groupSession.join()
     }
     
+    func openFaceTime(){
+        
+        if let facetimeURL:NSURL = NSURL(string: "facetime://user@example.com") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(facetimeURL as URL)) {
+                application.open(facetimeURL as URL);
+            }
+          }
+        
+    }
+    
+    
     // Process the input messages and handle accordingly
     private func handle(_ message: MoveMessage){
         DispatchQueue.main.async { [self] in

@@ -10,12 +10,28 @@ import SwiftUI
 struct Header: View {
     
     @EnvironmentObject var game: GameBoardRequestType
+    @EnvironmentObject var home: Home
     @State private var presentModal = false
     
     var body: some View {
         
         VStack{
             HStack{
+                
+                Button(action: {
+                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0.8)){
+                        home.show = false
+                        home.activeGame = game.name
+                    }
+                }) {
+                    ZStack{
+                        Circle()
+                            .foregroundColor(Color("Offwhite"))
+                            .frame(width: 35, height: 35)
+                        Image(systemName: "xmark")
+                    }
+                }
+                
                 Spacer()
                 
                 Button(action: {presentModal = true}) {

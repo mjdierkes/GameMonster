@@ -6,18 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 public class Home: ObservableObject{
     
     
-    @Published public var games: [Game] =
-        
-        [
-            Game(name: "Tic Tac Toe", coverImage: nil),
-            Game(name: "Connect 4", coverImage: nil),
-            Game(name: "Chess", coverImage: nil)
-        
-        ]
+    @Published var show = false
+    @Published var game = TTTGame()
+    @Published var activeGame = ""
     
 }

@@ -32,7 +32,6 @@ public final class ConnectFour: GameBoardRequestType {
         board[column][row] = activePlayer.cell
         activePlayer.toggle()
         
-        if winner != nil { print(winner)}
     }
     
     public override func reset(){
@@ -49,6 +48,7 @@ public final class ConnectFour: GameBoardRequestType {
                         board[x + 1][y] == player.cell,
                         board[x + 2][y] == player.cell,
                         board[x + 3][y] == player.cell {
+                        isDisabled = true
                         return player
                     }
                 }
@@ -61,6 +61,7 @@ public final class ConnectFour: GameBoardRequestType {
                         board[x][y + 1] == player.cell,
                         board[x][y + 2] == player.cell,
                         board[x][y + 3] == player.cell {
+                        isDisabled = true
                         return player
                     }
                 }
@@ -73,6 +74,7 @@ public final class ConnectFour: GameBoardRequestType {
                         board[x + 1][y - 1] == player.cell,
                         board[x + 2][y - 2] == player.cell,
                         board[x + 3][y - 3] == player.cell {
+                        isDisabled = true
                         return player
                     }
                 }
@@ -85,6 +87,7 @@ public final class ConnectFour: GameBoardRequestType {
                         board[x + 1][y + 1] == player.cell,
                         board[x + 2][y + 2] == player.cell,
                         board[x + 3][y + 3] == player.cell {
+                        isDisabled = true
                         return player
                     }
                 }
