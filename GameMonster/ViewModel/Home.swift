@@ -16,4 +16,18 @@ public class Home: ObservableObject{
     @Published var game = TTTGame()
     @Published var activeGame = ""
     
+    let defaults = UserDefaults.standard
+
+    public var isOldUser: Bool {
+        get {
+            return defaults.bool(forKey: "isOldUser")
+        }
+        set (status) {
+            let defaults = UserDefaults.standard
+            print("Saved: New User Status as \(status)")
+            defaults.set(status, forKey: "isOldUser")
+        }
+    }
+    
+
 }

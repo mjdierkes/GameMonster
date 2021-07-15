@@ -17,6 +17,7 @@ struct HomeView: View {
     @EnvironmentObject var home: Home
     @State private var isPresented = false
     @State private var gameNum = -1
+    @State private var presentModal = false
     @StateObject var groupStateObserver = GroupStateObserver()
 
     private let groupSessionManager = GameBoardRequestType(type: .TicTacToe)
@@ -55,6 +56,11 @@ struct HomeView: View {
 
                         }.padding()
                         Spacer()
+                            .sheet(isPresented: $presentModal) {
+                                    OnboardingView(showModal: $presentModal)
+                            }
+                        
+                          
 //                            .onAppear(perform: {
 //                                print(groupSessionManager.session)
 //                                print(groupStateObserver.isEligibleForGroupSession)
@@ -67,8 +73,32 @@ struct HomeView: View {
                         
                         
                     }
+                    .onAppear {
+//                        let defaults = UserDefaults.standard
+//                          let dictionary = defaults.dictionaryRepresentation()
+//                          dictionary.keys.forEach { key in
+//                              defaults.removeObject(forKey: key)
+//                          }
+
+                        if !home.isOldUser {
+                            presentModal = true
+                            home.isOldUser = true
+                        }
+                    }
                         
                 }
+                
+                if groupSessionManager.session == nil && groupStateObserver.isEligibleForGroupSession {
+                    Button {
+                        PlayTogether().activate()
+                    } label: {
+                        HStack{
+                            Image(systemName: "person.2.fill")
+                            Text("Activate Group Session")
+                        }
+                    }
+                }
+                
                 
             }
 //        }
