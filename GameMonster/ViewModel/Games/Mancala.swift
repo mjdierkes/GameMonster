@@ -46,8 +46,8 @@ public class Mancala: GameBoardRequestType {
     
         
     
-    init(){
-        super.init(type: .Mancala)
+    override init(){
+        super.init()
         reset()
     }
 
@@ -90,9 +90,7 @@ public class Mancala: GameBoardRequestType {
     private func updateGameStatus() -> GameStatus {
         
         var localSum = 0, opponentSum = 0
-        
         for i in 1..<localMoves.count {
-            
             if localMoves[i].stones != 0 {
                 return .undetermined
             }
@@ -110,13 +108,7 @@ public class Mancala: GameBoardRequestType {
         
     }
     
-    
-    
-    
-    
-    
 }
-
 
 extension Array {
     func chunked(into size: Int) -> [[Element]] {

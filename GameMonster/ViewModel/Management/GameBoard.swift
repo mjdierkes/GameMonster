@@ -34,7 +34,7 @@ public protocol GameBoard: ObservableObject {
 
 public class GameBoardRequestType: GameBoard, ObservableObject{
     
-    public let type: GameType
+//    public let type: GameType
     public let impactGenerator = UIImpactFeedbackGenerator(style: .light)
 
     private let profile = Profile()
@@ -50,21 +50,27 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
     @Published public var opponent = Player(id: UUID(), name: "Default")
     @Published public var wins = 0
     
+    public let name: String  = "Tic Tac Toe"
     
-    public var name: String {
-        switch type {
-        case .TicTacToe:
-            return "Tic Tac Toe"
-        case .Mancala:
-            return "Mancala"
-        case .ConnectFour:
-            return "Connect Four"
-        }
-    }
+//    public var name: String {
+//        switch type {
+//        case .TicTacToe:
+//            return "Tic Tac Toe"
+//        case .Mancala:
+//            return "Mancala"
+//        case .ConnectFour:
+//            return "Connect Four"
+//        }
+//    }
+//    
+//    
+//    public init(type: GameType){
+//        self.type = type
+//    }
     
     
-    public init(type: GameType){
-        self.type = type
+    public init() {
+        
     }
     
     public func reset(){
@@ -96,6 +102,3 @@ public enum GameStatus {
     case local, opponent, draw, undetermined
 }
 
-public enum GameType {
-    case TicTacToe, Mancala, ConnectFour
-}

@@ -22,9 +22,9 @@ struct MancalaView: View {
                 StoreView(stones: game.localMoves[0].stones)
                 HStack{
                     VStack{
-                        ForEach(game.localMoves){ move in
+                        ForEach(game.localMoves) { move in
                             if move.boardIndex != 0 {
-                                PocketView(for: move)
+                                Pocket(for: move)
                                     .onTapGesture(perform: { game.update(for: move) })
                             }
                         }
@@ -32,7 +32,7 @@ struct MancalaView: View {
                     VStack{
                         ForEach(game.opponentMoves.reversed()){ move in
                             if move.boardIndex != 7 {
-                                PocketView(for: move)
+                                Pocket(for: move)
                                     .onTapGesture(perform: { game.update(for: move) })
                             }
                         }

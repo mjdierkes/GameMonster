@@ -17,7 +17,7 @@ public final class ConnectFour: GameBoardRequestType {
     public init(columns: Int = 7, rows: Int = 6){
         let emptyRow = [Token](repeating: .empty, count: rows)
         board = [[Token]](repeating: emptyRow, count: columns)
-        super.init(type: .ConnectFour)
+        super.init()
     }
     
     
@@ -95,7 +95,5 @@ public final class ConnectFour: GameBoardRequestType {
         }
         return nil
     }
-    
-    
     
 }

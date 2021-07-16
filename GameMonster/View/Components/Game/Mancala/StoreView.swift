@@ -31,6 +31,6 @@ struct StoreView_Previews: PreviewProvider {
     @State private static var move = MancalaMove(mover: .local, boardIndex: 2, stones: 4)
     
     static var previews: some View {
-        PocketView(for: move)
+        Pocket(for: move)
     }
 }

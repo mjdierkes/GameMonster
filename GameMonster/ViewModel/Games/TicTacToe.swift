@@ -41,8 +41,8 @@ public class TicTacToe: GameBoardRequestType {
     }
 
     
-    init(){
-        super.init(type: .TicTacToe)
+    override init(){
+        super.init()
         self.player = profile.getDefault(for: UUID())
     }
     

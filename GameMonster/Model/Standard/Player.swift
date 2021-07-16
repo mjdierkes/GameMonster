@@ -16,10 +16,12 @@ public enum Mover: Codable {
     case local, opponent
 }
 
-
+/// Provides current player for ConnectFour game.
 public enum ActivePlayer: CaseIterable{
     case red, yellow
     
+    /// Switches the chip color to opposite value.
+    /// This is used when changing player turns.
     mutating func toggle() {
         switch self {
         case .red: self = .yellow

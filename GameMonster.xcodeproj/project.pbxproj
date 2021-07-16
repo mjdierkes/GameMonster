@@ -11,17 +11,19 @@
 		9334D0042688F42D006F5164 /* ConnectBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D0032688F42D006F5164 /* ConnectBoardView.swift */; };
 		9334D00626890587006F5164 /* ConnectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334D00526890587006F5164 /* ConnectFour.swift */; };
 		F7116C7E26815886002818B8 /* MancalaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C7D26815886002818B8 /* MancalaView.swift */; };
-		F7116C8026815D3F002818B8 /* MancalaGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C7F26815D3F002818B8 /* MancalaGameView.swift */; };
-		F7116C82268161BA002818B8 /* PocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C81268161BA002818B8 /* PocketView.swift */; };
+		F7116C82268161BA002818B8 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C81268161BA002818B8 /* Pocket.swift */; };
 		F7116C842681771D002818B8 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C832681771D002818B8 /* StoreView.swift */; };
 		F724C3B6269DE4E400A85219 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B5269DE4E400A85219 /* GameButton.swift */; };
 		F724C3B8269E030500A85219 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B7269E030500A85219 /* Home.swift */; };
 		F724C3BA269FBEEA00A85219 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B9269FBEEA00A85219 /* OnboardingView.swift */; };
-		F72EF841268E2AFA00885CC0 /* ConnectFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */; };
 		F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A62678DF4C001D2168 /* ProfileView.swift */; };
 		F74334A92678E08D001D2168 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A82678E08D001D2168 /* Profile.swift */; };
 		F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AA2678F1CD001D2168 /* HomeView.swift */; };
 		F74334AD2678F99C001D2168 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AC2678F99C001D2168 /* Game.swift */; };
+		F76B5B4026A20CC6008AA663 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B3F26A20CC6008AA663 /* GameView.swift */; };
+		F76B5B4E26A229A7008AA663 /* FeatureSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B4D26A229A7008AA663 /* FeatureSection.swift */; };
+		F76B5B5126A22A5A008AA663 /* FaceTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B5026A22A5A008AA663 /* FaceTime.swift */; };
+		F76B5B5326A22ADE008AA663 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B5226A22ADE008AA663 /* Welcome.swift */; };
 		F7C5A1DC267A93A400B62E52 /* winSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */; };
 		F7C5A1E1267AC27300B62E52 /* SquareSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */; };
 		F7CB31E4267E505B005E83F5 /* Mancala.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB31E3267E505B005E83F5 /* Mancala.swift */; };
@@ -37,7 +39,6 @@
 		F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD66026779EF100CC29E6 /* TicTacToe.swift */; };
 		F7EDD66B2677B5D700CC29E6 /* TTTBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */; };
 		F7EDD66D2677B62700CC29E6 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD66C2677B62700CC29E6 /* SquareView.swift */; };
-		F7EDD6712677C4D800CC29E6 /* TTTGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6702677C4D800CC29E6 /* TTTGame.swift */; };
 		F7EDD6732677C5E400CC29E6 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6722677C5E400CC29E6 /* Header.swift */; };
 		F7EDD6752677C60700CC29E6 /* PlayerTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6742677C60700CC29E6 /* PlayerTag.swift */; };
 		F7EDD6772677C88C00CC29E6 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EDD6762677C88C00CC29E6 /* Audience.swift */; };
@@ -75,17 +76,19 @@
 		9334D00526890587006F5164 /* ConnectFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFour.swift; sourceTree = "<group>"; };
 		93449EE926882C4500F63E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7116C7D26815886002818B8 /* MancalaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaView.swift; sourceTree = "<group>"; };
-		F7116C7F26815D3F002818B8 /* MancalaGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaGameView.swift; sourceTree = "<group>"; };
-		F7116C81268161BA002818B8 /* PocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketView.swift; sourceTree = "<group>"; };
+		F7116C81268161BA002818B8 /* Pocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
 		F7116C832681771D002818B8 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		F724C3B5269DE4E400A85219 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		F724C3B7269E030500A85219 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F724C3B9269FBEEA00A85219 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourView.swift; sourceTree = "<group>"; };
 		F74334A62678DF4C001D2168 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F74334A82678E08D001D2168 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F74334AA2678F1CD001D2168 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F74334AC2678F99C001D2168 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F76B5B3F26A20CC6008AA663 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		F76B5B4D26A229A7008AA663 /* FeatureSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSection.swift; sourceTree = "<group>"; };
+		F76B5B5026A22A5A008AA663 /* FaceTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTime.swift; sourceTree = "<group>"; };
+		F76B5B5226A22ADE008AA663 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winSoundEffect.wav; sourceTree = "<group>"; };
 		F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SquareSoundEffect.wav; sourceTree = "<group>"; };
 		F7CB31E3267E505B005E83F5 /* Mancala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mancala.swift; sourceTree = "<group>"; };
@@ -104,7 +107,6 @@
 		F7EDD66026779EF100CC29E6 /* TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe.swift; sourceTree = "<group>"; };
 		F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTBoardView.swift; sourceTree = "<group>"; };
 		F7EDD66C2677B62700CC29E6 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		F7EDD6702677C4D800CC29E6 /* TTTGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTGame.swift; sourceTree = "<group>"; };
 		F7EDD6722677C5E400CC29E6 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		F7EDD6742677C60700CC29E6 /* PlayerTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTag.swift; sourceTree = "<group>"; };
 		F7EDD6762677C88C00CC29E6 /* Audience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audience.swift; sourceTree = "<group>"; };
@@ -145,6 +147,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F76B5B4226A21C37008AA663 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				F76B5B3F26A20CC6008AA663 /* GameView.swift */,
+				F74334AA2678F1CD001D2168 /* HomeView.swift */,
+				F74334A62678DF4C001D2168 /* ProfileView.swift */,
+				F724C3B9269FBEEA00A85219 /* OnboardingView.swift */,
+				F76B5B4F26A22A1E008AA663 /* Onboarding */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		F76B5B4326A21C72008AA663 /* GroupActivities */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */,
+				F7EDD68F2678618C00CC29E6 /* Messages.swift */,
+			);
+			path = GroupActivities;
+			sourceTree = "<group>";
+		};
+		F76B5B4426A21C97008AA663 /* Standard */ = {
+			isa = PBXGroup;
+			children = (
+				9334D0012688BFEB006F5164 /* Token.swift */,
+				F7EDD65C26779B6800CC29E6 /* Player.swift */,
+				F7EDD65E26779E0E00CC29E6 /* Move.swift */,
+				F74334AC2678F99C001D2168 /* Game.swift */,
+			);
+			path = Standard;
+			sourceTree = "<group>";
+		};
+		F76B5B4526A21E27008AA663 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F76B5B4826A21EBB008AA663 /* ConnectFour */,
+				F76B5B4726A21E58008AA663 /* Mancala */,
+				F76B5B4626A21E37008AA663 /* TicTacToe */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		F76B5B4626A21E37008AA663 /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */,
+				F7EDD66C2677B62700CC29E6 /* SquareView.swift */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		F76B5B4726A21E58008AA663 /* Mancala */ = {
+			isa = PBXGroup;
+			children = (
+				F7116C81268161BA002818B8 /* Pocket.swift */,
+				F7116C7D26815886002818B8 /* MancalaView.swift */,
+				F7116C832681771D002818B8 /* StoreView.swift */,
+			);
+			path = Mancala;
+			sourceTree = "<group>";
+		};
+		F76B5B4826A21EBB008AA663 /* ConnectFour */ = {
+			isa = PBXGroup;
+			children = (
+				9334D0032688F42D006F5164 /* ConnectBoardView.swift */,
+				F7F76744268D678400497EA2 /* CellView.swift */,
+			);
+			path = ConnectFour;
+			sourceTree = "<group>";
+		};
+		F76B5B4926A21F47008AA663 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				F7CB31E3267E505B005E83F5 /* Mancala.swift */,
+				F7EDD66026779EF100CC29E6 /* TicTacToe.swift */,
+				9334D00526890587006F5164 /* ConnectFour.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		F76B5B4A26A21F76008AA663 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */,
+				F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F76B5B4B26A21F8F008AA663 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDD65A26779B0C00CC29E6 /* GameBoard.swift */,
+				F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */,
+				F74334A82678E08D001D2168 /* Profile.swift */,
+				F724C3B7269E030500A85219 /* Home.swift */,
+			);
+			path = Management;
+			sourceTree = "<group>";
+		};
+		F76B5B4C26A223A9008AA663 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F76B5B4526A21E27008AA663 /* Game */,
+				F7EDD6862678532C00CC29E6 /* Page */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F76B5B4F26A22A1E008AA663 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F76B5B5026A22A5A008AA663 /* FaceTime.swift */,
+				F76B5B5226A22ADE008AA663 /* Welcome.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		F7EDD62326779A8900CC29E6 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +296,7 @@
 				F7EDD65826779AAD00CC29E6 /* View */,
 				F7EDD65926779ABC00CC29E6 /* ViewModel */,
 				F7EDD67C26781E1400CC29E6 /* ConfettiSwiftUI */,
+				F76B5B4A26A21F76008AA663 /* Sounds */,
 				F7EDD63326779A8B00CC29E6 /* Assets.xcassets */,
 				F7EDD63526779A8B00CC29E6 /* Preview Content */,
 			);
@@ -209,12 +330,8 @@
 		F7EDD65726779A9F00CC29E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9334D0012688BFEB006F5164 /* Token.swift */,
-				F7EDD65C26779B6800CC29E6 /* Player.swift */,
-				F7EDD65E26779E0E00CC29E6 /* Move.swift */,
-				F7EDD68D267860DD00CC29E6 /* PlayTogether.swift */,
-				F7EDD68F2678618C00CC29E6 /* Messages.swift */,
-				F74334AC2678F99C001D2168 /* Game.swift */,
+				F76B5B4326A21C72008AA663 /* GroupActivities */,
+				F76B5B4426A21C97008AA663 /* Standard */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,13 +339,8 @@
 		F7EDD65826779AAD00CC29E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F7EDD6702677C4D800CC29E6 /* TTTGame.swift */,
-				F72EF840268E2AFA00885CC0 /* ConnectFourView.swift */,
-				F7116C7F26815D3F002818B8 /* MancalaGameView.swift */,
-				F74334AA2678F1CD001D2168 /* HomeView.swift */,
-				F74334A62678DF4C001D2168 /* ProfileView.swift */,
-				F724C3B9269FBEEA00A85219 /* OnboardingView.swift */,
-				F7EDD6862678532C00CC29E6 /* ComponentViews */,
+				F76B5B4226A21C37008AA663 /* Pages */,
+				F76B5B4C26A223A9008AA663 /* Components */,
 				F7EDD6872678534A00CC29E6 /* Confetti */,
 			);
 			path = View;
@@ -237,13 +349,8 @@
 		F7EDD65926779ABC00CC29E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F7EDD65A26779B0C00CC29E6 /* GameBoard.swift */,
-				F7CB31E3267E505B005E83F5 /* Mancala.swift */,
-				9334D00526890587006F5164 /* ConnectFour.swift */,
-				F7EDD66026779EF100CC29E6 /* TicTacToe.swift */,
-				F7EDD68A2678556500CC29E6 /* GroupSessionManager.swift */,
-				F74334A82678E08D001D2168 /* Profile.swift */,
-				F724C3B7269E030500A85219 /* Home.swift */,
+				F76B5B4926A21F47008AA663 /* Games */,
+				F76B5B4B26A21F8F008AA663 /* Management */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -251,8 +358,6 @@
 		F7EDD67C26781E1400CC29E6 /* ConfettiSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */,
-				F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */,
 				F7EDD67D26781E1400CC29E6 /* Shapes */,
 			);
 			path = ConfettiSwiftUI;
@@ -265,13 +370,17 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
-		F7EDD6862678532C00CC29E6 /* ComponentViews */ = {
+		F7EDD6862678532C00CC29E6 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				F7EDD6892678539F00CC29E6 /* Game */,
-				F7EDD6882678537D00CC29E6 /* Page */,
+				F7EDD6762677C88C00CC29E6 /* Audience.swift */,
+				F7EDD6722677C5E400CC29E6 /* Header.swift */,
+				F7EDD6742677C60700CC29E6 /* PlayerTag.swift */,
+				F7EDD6782677D4F800CC29E6 /* BottomBar.swift */,
+				F724C3B5269DE4E400A85219 /* GameButton.swift */,
+				F76B5B4D26A229A7008AA663 /* FeatureSection.swift */,
 			);
-			path = ComponentViews;
+			path = Page;
 			sourceTree = "<group>";
 		};
 		F7EDD6872678534A00CC29E6 /* Confetti */ = {
@@ -283,32 +392,6 @@
 				F7EDD68026781E1400CC29E6 /* SlimRectangle.swift */,
 			);
 			path = Confetti;
-			sourceTree = "<group>";
-		};
-		F7EDD6882678537D00CC29E6 /* Page */ = {
-			isa = PBXGroup;
-			children = (
-				F7EDD6762677C88C00CC29E6 /* Audience.swift */,
-				F7EDD6722677C5E400CC29E6 /* Header.swift */,
-				F7EDD6742677C60700CC29E6 /* PlayerTag.swift */,
-				F7EDD6782677D4F800CC29E6 /* BottomBar.swift */,
-				F724C3B5269DE4E400A85219 /* GameButton.swift */,
-			);
-			path = Page;
-			sourceTree = "<group>";
-		};
-		F7EDD6892678539F00CC29E6 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				F7EDD66A2677B5D700CC29E6 /* TTTBoardView.swift */,
-				9334D0032688F42D006F5164 /* ConnectBoardView.swift */,
-				F7116C7D26815886002818B8 /* MancalaView.swift */,
-				F7116C81268161BA002818B8 /* PocketView.swift */,
-				F7116C832681771D002818B8 /* StoreView.swift */,
-				F7EDD66C2677B62700CC29E6 /* SquareView.swift */,
-				F7F76744268D678400497EA2 /* CellView.swift */,
-			);
-			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,18 +537,18 @@
 				F7EDD68226781E3400CC29E6 /* ConfettiSwiftUI.swift in Sources */,
 				F7116C7E26815886002818B8 /* MancalaView.swift in Sources */,
 				F7EDD63226779A8900CC29E6 /* ContentView.swift in Sources */,
-				F72EF841268E2AFA00885CC0 /* ConnectFourView.swift in Sources */,
 				F7EDD65B26779B0C00CC29E6 /* GameBoard.swift in Sources */,
 				F7EDD6772677C88C00CC29E6 /* Audience.swift in Sources */,
+				F76B5B5126A22A5A008AA663 /* FaceTime.swift in Sources */,
+				F76B5B5326A22ADE008AA663 /* Welcome.swift in Sources */,
 				F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */,
 				F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */,
-				F7EDD6712677C4D800CC29E6 /* TTTGame.swift in Sources */,
 				F724C3BA269FBEEA00A85219 /* OnboardingView.swift in Sources */,
 				9334D0022688BFEB006F5164 /* Token.swift in Sources */,
 				9334D0042688F42D006F5164 /* ConnectBoardView.swift in Sources */,
 				F7EDD6792677D4F800CC29E6 /* BottomBar.swift in Sources */,
 				F7EDD63026779A8900CC29E6 /* GameMonsterApp.swift in Sources */,
-				F7116C8026815D3F002818B8 /* MancalaGameView.swift in Sources */,
+				F76B5B4E26A229A7008AA663 /* FeatureSection.swift in Sources */,
 				F7EDD68326781E4300CC29E6 /* RoundedCross.swift in Sources */,
 				F7EDD66D2677B62700CC29E6 /* SquareView.swift in Sources */,
 				F7EDD6902678618C00CC29E6 /* Messages.swift in Sources */,
@@ -473,8 +556,9 @@
 				F7116C842681771D002818B8 /* StoreView.swift in Sources */,
 				F724C3B8269E030500A85219 /* Home.swift in Sources */,
 				F724C3B6269DE4E400A85219 /* GameButton.swift in Sources */,
-				F7116C82268161BA002818B8 /* PocketView.swift in Sources */,
+				F7116C82268161BA002818B8 /* Pocket.swift in Sources */,
 				F7EDD68B2678556500CC29E6 /* GroupSessionManager.swift in Sources */,
+				F76B5B4026A20CC6008AA663 /* GameView.swift in Sources */,
 				F7CB31E4267E505B005E83F5 /* Mancala.swift in Sources */,
 				9334D00626890587006F5164 /* ConnectFour.swift in Sources */,
 				F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */,

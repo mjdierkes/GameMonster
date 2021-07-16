@@ -13,24 +13,16 @@ struct ProfileView: View {
     @State private var changed = false
     
     var body: some View {
-        VStack{
+        VStack {
             Text("Profile")
                 .fontWeight(.heavy).font(.title)
             
             Text(game.player.name)
             
-            TextField("Enter your name", text: $game.player.name, onEditingChanged: { (changed) in
-                if changed {
-                    
-                    print("changed")
-                }
-            },
-            onCommit: {
+            TextField("Enter your name", text: $game.player.name, onCommit: {
                 game.updateProfile(name: game.player.name)
                 print("commit")
-            }
-            )
-            
+            })
         }
     }
 }

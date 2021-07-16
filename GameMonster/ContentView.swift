@@ -9,17 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
+    /// The main page of the App
+    /// The Home model manages the user's data.
     @StateObject private var home = Home()
-    @StateObject private var game = ConnectFour()
     
     var body: some View {
-//        OnboardingView()
         HomeView()
             .environmentObject(home)
-//        TTTGame()
-//        MancalaGameView()
-//        ConnectFourView()
-//            .environmentObject(game)
     }
 }
 
