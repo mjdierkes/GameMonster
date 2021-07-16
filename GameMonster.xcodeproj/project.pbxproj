@@ -15,7 +15,6 @@
 		F7116C842681771D002818B8 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7116C832681771D002818B8 /* StoreView.swift */; };
 		F724C3B6269DE4E400A85219 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B5269DE4E400A85219 /* GameButton.swift */; };
 		F724C3B8269E030500A85219 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B7269E030500A85219 /* Home.swift */; };
-		F724C3BA269FBEEA00A85219 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724C3B9269FBEEA00A85219 /* OnboardingView.swift */; };
 		F74334A72678DF4C001D2168 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A62678DF4C001D2168 /* ProfileView.swift */; };
 		F74334A92678E08D001D2168 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334A82678E08D001D2168 /* Profile.swift */; };
 		F74334AB2678F1CD001D2168 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74334AA2678F1CD001D2168 /* HomeView.swift */; };
@@ -24,6 +23,7 @@
 		F76B5B4E26A229A7008AA663 /* FeatureSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B4D26A229A7008AA663 /* FeatureSection.swift */; };
 		F76B5B5126A22A5A008AA663 /* FaceTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B5026A22A5A008AA663 /* FaceTime.swift */; };
 		F76B5B5326A22ADE008AA663 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B5226A22ADE008AA663 /* Welcome.swift */; };
+		F76B5B5526A22EC6008AA663 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B5B5426A22EC6008AA663 /* OnboardingView.swift */; };
 		F7C5A1DC267A93A400B62E52 /* winSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */; };
 		F7C5A1E1267AC27300B62E52 /* SquareSoundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */; };
 		F7CB31E4267E505B005E83F5 /* Mancala.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB31E3267E505B005E83F5 /* Mancala.swift */; };
@@ -80,7 +80,6 @@
 		F7116C832681771D002818B8 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		F724C3B5269DE4E400A85219 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		F724C3B7269E030500A85219 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		F724C3B9269FBEEA00A85219 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F74334A62678DF4C001D2168 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F74334A82678E08D001D2168 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F74334AA2678F1CD001D2168 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		F76B5B4D26A229A7008AA663 /* FeatureSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSection.swift; sourceTree = "<group>"; };
 		F76B5B5026A22A5A008AA663 /* FaceTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTime.swift; sourceTree = "<group>"; };
 		F76B5B5226A22ADE008AA663 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		F76B5B5426A22EC6008AA663 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F7C5A1DB267A93A400B62E52 /* winSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winSoundEffect.wav; sourceTree = "<group>"; };
 		F7C5A1E0267AC27300B62E52 /* SquareSoundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SquareSoundEffect.wav; sourceTree = "<group>"; };
 		F7CB31E3267E505B005E83F5 /* Mancala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mancala.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				F76B5B3F26A20CC6008AA663 /* GameView.swift */,
 				F74334AA2678F1CD001D2168 /* HomeView.swift */,
 				F74334A62678DF4C001D2168 /* ProfileView.swift */,
-				F724C3B9269FBEEA00A85219 /* OnboardingView.swift */,
+				F76B5B5426A22EC6008AA663 /* OnboardingView.swift */,
 				F76B5B4F26A22A1E008AA663 /* Onboarding */,
 			);
 			path = Pages;
@@ -537,13 +537,13 @@
 				F7EDD68226781E3400CC29E6 /* ConfettiSwiftUI.swift in Sources */,
 				F7116C7E26815886002818B8 /* MancalaView.swift in Sources */,
 				F7EDD63226779A8900CC29E6 /* ContentView.swift in Sources */,
+				F76B5B5526A22EC6008AA663 /* OnboardingView.swift in Sources */,
 				F7EDD65B26779B0C00CC29E6 /* GameBoard.swift in Sources */,
 				F7EDD6772677C88C00CC29E6 /* Audience.swift in Sources */,
 				F76B5B5126A22A5A008AA663 /* FaceTime.swift in Sources */,
 				F76B5B5326A22ADE008AA663 /* Welcome.swift in Sources */,
 				F7EDD68E267860DD00CC29E6 /* PlayTogether.swift in Sources */,
 				F7EDD66126779EF200CC29E6 /* TicTacToe.swift in Sources */,
-				F724C3BA269FBEEA00A85219 /* OnboardingView.swift in Sources */,
 				9334D0022688BFEB006F5164 /* Token.swift in Sources */,
 				9334D0042688F42D006F5164 /* ConnectBoardView.swift in Sources */,
 				F7EDD6792677D4F800CC29E6 /* BottomBar.swift in Sources */,
