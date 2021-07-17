@@ -11,9 +11,7 @@ import SwiftUI
 
 public class Home: ObservableObject{
     
-    
     @Published var show = false
-//    @Published var game = TTTGame()
     @Published var activeGame = ""
     
     let defaults = UserDefaults.standard
@@ -29,5 +27,4 @@ public class Home: ObservableObject{
         }
     }
     
-
 }

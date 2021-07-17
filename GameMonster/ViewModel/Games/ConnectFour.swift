@@ -41,7 +41,7 @@ public final class ConnectFour: GameBoardRequestType {
     
     public var winner: ActivePlayer? {
         for player in ActivePlayer.allCases {
-            // Check horizontal win
+            /// Check horizontal win.
             for x in 0..<board.count - 3 {
                 for y in 0..<board[0].count {
                     if board[x][y] == player.cell,
@@ -54,7 +54,7 @@ public final class ConnectFour: GameBoardRequestType {
                 }
             }
 
-            // Check vertical win
+            /// Check vertical win.
             for x in 0..<board.count {
                 for y in 0..<board[0].count - 3 {
                     if board[x][y] == player.cell,
@@ -67,7 +67,7 @@ public final class ConnectFour: GameBoardRequestType {
                 }
             }
 
-            // Check for diagonal ascending win
+            /// Check for diagonal ascending win.
             for x in 0..<board.count - 3 {
                 for y in 3..<board[0].count {
                     if board[x][y] == player.cell,
@@ -80,7 +80,7 @@ public final class ConnectFour: GameBoardRequestType {
                 }
             }
 
-            // Check for diagonal ascending win
+            /// Check for diagonal ascending win.
             for x in 0..<board.count - 3 {
                 for y in 0..<board[0].count - 3 {
                     if board[x][y] == player.cell,

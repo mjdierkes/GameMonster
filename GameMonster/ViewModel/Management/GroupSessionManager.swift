@@ -12,7 +12,7 @@ import SwiftUI
 
 public extension GameBoardRequestType {
     
-    // Send messages
+    /// Send messages.
     func sendMessage(as move: TTTMove){
         if let messenger = messenger {
             async {
@@ -45,14 +45,14 @@ public extension GameBoardRequestType {
         self.messenger = messenger
         self.session = groupSession
         
-        // Update late joiners
+        /// Updates late joiners on status of board and active players.
         groupSession.$activeParticipants
             .sink{ [self] activeParticipants in
                 sendMessage(moves: flippedMoves(), audience: audience)
             }
             .store(in: &subscriptions)
         
-        // Await to receive Messages
+        /// Listens for messages on the network.
         let moveTask = detach { [weak self] in
             for await (message, _) in messenger.messages(of:
                 MoveMessage.self) {
@@ -84,7 +84,7 @@ public extension GameBoardRequestType {
     }
     
     
-    // Process the input messages and handle accordingly
+    /// Process the input messages and handle accordingly.
     private func handle(_ message: MoveMessage){
         DispatchQueue.main.async { [self] in
             update(for: message.move)

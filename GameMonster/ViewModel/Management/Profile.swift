@@ -11,7 +11,6 @@ import Foundation
 public struct Profile {
     
     let defaults = UserDefaults.standard
-
     
     public func getDefault(for identifier: UUID) -> Player {
         
@@ -33,6 +32,7 @@ public struct Profile {
     
     private func randomName() -> String{
         
+        // TODO: Add more or generate more random names.
         let names = ["Orange Mellon", "Purple Cow"]
         
         return names.randomElement()!

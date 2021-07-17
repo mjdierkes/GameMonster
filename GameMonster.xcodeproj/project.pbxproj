@@ -295,7 +295,6 @@
 				F7EDD65726779A9F00CC29E6 /* Model */,
 				F7EDD65826779AAD00CC29E6 /* View */,
 				F7EDD65926779ABC00CC29E6 /* ViewModel */,
-				F7EDD67C26781E1400CC29E6 /* ConfettiSwiftUI */,
 				F76B5B4A26A21F76008AA663 /* Sounds */,
 				F7EDD63326779A8B00CC29E6 /* Assets.xcassets */,
 				F7EDD63526779A8B00CC29E6 /* Preview Content */,
@@ -353,21 +352,6 @@
 				F76B5B4B26A21F8F008AA663 /* Management */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F7EDD67C26781E1400CC29E6 /* ConfettiSwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				F7EDD67D26781E1400CC29E6 /* Shapes */,
-			);
-			path = ConfettiSwiftUI;
-			sourceTree = "<group>";
-		};
-		F7EDD67D26781E1400CC29E6 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shapes;
 			sourceTree = "<group>";
 		};
 		F7EDD6862678532C00CC29E6 /* Page */ = {
@@ -746,7 +730,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.masondierkes.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesdierkes.GameMonster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

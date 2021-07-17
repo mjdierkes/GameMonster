@@ -13,13 +13,9 @@ import AVKit
 
 public class TicTacToe: GameBoardRequestType {
     
-    public let columns = [GridItem(.flexible()),
-                          GridItem(.flexible()),
-                          GridItem(.flexible())]
-
-
-    private let profile = Profile()
+    public let columns = [GridItem](repeating: GridItem(.flexible()), count: 3 )
     
+    private let profile = Profile()
     
     // Resets GameBoard back to initial state
     public override func reset() {
