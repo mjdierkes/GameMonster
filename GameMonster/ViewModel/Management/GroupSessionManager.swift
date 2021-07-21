@@ -12,6 +12,7 @@ import SwiftUI
 
 public extension GameBoardRequestType {
     
+    
     /// Send messages.
     func sendMessage(as move: TTTMove){
         if let messenger = messenger {

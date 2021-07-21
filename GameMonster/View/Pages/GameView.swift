@@ -23,6 +23,9 @@ struct GameView: View {
             case .ConnectFour:
                 ConnectBoardView()
                     .environmentObject(ConnectFour())
+            case .Mancala:
+                MancalaView()
+                    .environmentObject(Mancala())
             default:
                 Text("Game not correctly specified")
             }

@@ -87,8 +87,13 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
     public func updateProfile(name: String){
         profile.saveName(name)
     }
+    
+//    private enum moveParsingError: Error {
+//        case spaceUnavailable
+//    }
 
-    public var tasks = Set<Task.Handle<Void, Never>>()
+    public var taskks = Set<Task<Any, Error>>
+    public var tasks = Set<Task<Any, Error>.Handle<Void, Never>>()
     public var subscriptions = Set<AnyCancellable>()
     
     public var messenger: GroupSessionMessenger?
