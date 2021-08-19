@@ -92,7 +92,6 @@ public class GameBoardRequestType: GameBoard, ObservableObject{
 //        case spaceUnavailable
 //    }
 
-    public var taskks = Set<Task<Any, Error>>
     public var tasks = Set<Task<Any, Error>.Handle<Void, Never>>()
     public var subscriptions = Set<AnyCancellable>()
     
